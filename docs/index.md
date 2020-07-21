@@ -1,9 +1,9 @@
-# NUS SoC UNIX Workshop
+# NUS UNIX@Home Workshop
 ### AY20/21 Semester 1
 
 ## About
 
-The SoC UNIX Workshop is a workshop organized by faculty members of the School of Computing, National University of Singapore, for first-year students.
+The NUS SoC UNIX Workshop is a workshop organized by faculty members of the School of Computing, National University of Singapore, for first-year students.  This year, we will conduct the "UNIX@Home" version, entirely online via Zoom.
 
 ## Objectives
 The aims for the workshop are
