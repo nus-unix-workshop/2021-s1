@@ -1,4 +1,4 @@
-# Tentative Schedule for The Workshop
+# Tentative Schedule for the Workshop
 
 Allocated time is a very rough approxmiate.
 
