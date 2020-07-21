@@ -1,6 +1,6 @@
 # Tentative Schedule for UNIX@Home Workshop
 
-Allocated time is a very rough approxmiate.
+(Note: Allocated time is a very rough approxmiate)
 
 ## Day 1
 ### Plenary Session 1: Introduction (20 minutes)
