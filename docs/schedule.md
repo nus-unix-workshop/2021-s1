@@ -5,9 +5,9 @@
 ## Day 1
 ### Plenary Session 1: Introduction (20 minutes)
 
-- UNIX: History, variants, importance
-- Command-line interface: History, importance, advantages
-- UNIX shells
+- [What is Unix?  Why are we learning/using Unix?](why-unix.md)
+- [What is CLI? Why are we learning/using CLI?](why-cli.md)
+- [What is a terminal? What is a shell?](shell.md)
 
 ### Breakout Session 2: Basic UNIX Files Operations I (30 minutes) 
 
