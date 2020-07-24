@@ -1,23 +1,23 @@
-# NUS UNIX@Home Workshop
+# Unix 101: The NUS SoC Unix@Home Workshop
 ### AY20/21 Semester 1
 
 ## About
 
-The NUS SoC UNIX Workshop is a workshop organized by faculty members of the School of Computing, National University of Singapore, for first-year students.  This year, we will conduct the "UNIX@Home" version, entirely online via Zoom.
+The NUS SoC Unix Workshop is a workshop organized by faculty members of the School of Computing, National University of Singapore, for first-year students.  This year, we will conduct the "Unix@Home" version, entirely online via Zoom.
 
 ## Objectives
 The aims for the workshop are
 
-- To introduce students to using UNIX-based computing environment for daily computing tasks
-- To prepare students to be efficient in using UNIX for their computing career
+- To introduce students to using Unix-based computing environment for daily computing tasks
+- To prepare students to be efficient in using Unix for their computing career
 
 After taking the workshop, students are expected to:
 
-- Understand common terminology: UNIX, Linux, Ubuntu, SunOS, ssh, host, command line, shell, operating systems, etc.
-- Appreciate the advantages of the UNIX environment
-- Understand the UNIX file organization
-- Able to perform common file management tasks (create/copy/move/remove/change permission, etc) through UNIX shell
-- (For Windows 10 users) Setup local UNIX environment
+- Understand common terminology: Unix, Linux, Ubuntu, SunOS, ssh, host, command line, shell, operating systems, etc.
+- Appreciate the advantages of the Unix environment
+- Understand the Unix file organization
+- Able to perform common file management tasks (create/copy/move/remove/change permission, etc) through Unix shell
+- (For Windows 10 users) Setup local Unix environment
 - Setup apt (Win10) or Homebrew (macOS) and able to use it to install library or applications
 
 ## Time and Venue
