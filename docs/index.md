@@ -32,12 +32,12 @@ The date and time are as follows:
 
 The workshop will be conducted online via Zoom.
 
-## Who Should Register
+## Registration
 First year students taking CS1010, CS2030, CS2030S, and CS2040 in Semester 1 of AY2020/21 will be given priority to register for and to attend the workshop.
 
-The workshop is free to attend.
+The workshop is sponsored by the NUS School of Computing and is free to attend.  Space, however, is limited -- please register only if you are committed to attend.
 
-Registration links will be provided here soon.  Please check back. 
+lease <a href="https://nus.syd1.qualtrics.com/jfe/form/SV_8tQi8pwT2MGXFLD">register here.</a> before **28 July, 2020**.
 
 ## License
 
