@@ -1,4 +1,4 @@
-# Tentative Schedule for UNIX@Home Workshop
+# Tentative Schedule for Unix@Home Workshop
 
 (Note: Allocated time is a very rough approxmiate)
 
@@ -9,7 +9,7 @@
 - [What is CLI? Why are we learning/using CLI?](why-cli.md)
 - [What is a terminal? What is a shell?](shell.md)
 
-### Breakout Session 2: Basic UNIX Files Operations I (30 minutes) 
+### Breakout Session 2: Basic Unix Files Operations I (30 minutes) 
 
 - Install WSL and Windows Terminal
 - Installing tmate for terminal sharing
@@ -25,7 +25,7 @@
 
 #### Break (20 minutes)
 
-### Breakout Session 3:  Basic UNIX Files Operations II (20 minutes) 
+### Breakout Session 3:  Basic Unix Files Operations II (20 minutes) 
 
 - Making and removing your own directory (`mkdir` and `rm`)
 - Creating, moving, and copying files (`touch`, `mv`, `cp`)
@@ -40,13 +40,13 @@
 - Redirection (`<`, `>`, `>>`)
 - Piping (`|`)
 - Pattern matching in bash (`*`, `?`, `{}`)
-- UNIX power tools:
+- Unix power tools:
     - Looking for something in a file (`grep`)
     - Comparing two files (`diff`)
     - Counting lines, words, and characters (`wc`)
 
 ## DAY 2
-### Plenary Session 5: Gaining Efficiency with UNIX (10 minutes)
+### Plenary Session 5: Gaining Efficiency with Unix (10 minutes)
 
 - Automation, Staying in Your Zone, and Powertools
 - The philosophy and power of `vim`
@@ -64,7 +64,7 @@
 - Command-line arguments and variables
 
 #### Break (20 minutes)
-### Breakout Session 7: Extending your UNIX Environment (20 minutes)
+### Breakout Session 7: Extending your Unix Environment (20 minutes)
 
 - Using `apt` (WSL) and `brew` (macOS), `curl`
 - install, list, search, uninstall
@@ -74,12 +74,12 @@
 - Concepts of hosts, client, server.
 - Accessing a remote server via `ssh`
 - Ssh into `sdf.org`
-    - Preview of SoC UNIX environments (`stu0`) 
+    - Preview of SoC Unix environments (`stu0`) 
 
 #### Break (20 minutes)
-### Plenary Session 9: Conclusion and The UNIX Philosophy (15 minutes)
+### Plenary Session 9: Conclusion and The Unix Philosophy (15 minutes)
 
-- The UNIX Philosophy
+- The Unix Philosophy
     - Do one thing well
     - Use simple text file
     - Make every program a filter and make them work together
