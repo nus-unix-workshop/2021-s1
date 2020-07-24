@@ -1,7 +1,7 @@
-site_name: NUS SoC UNIX Workshop
+site_name: UNIX 101
 site_url: https://nus-unix-workshop.github.io/2021-s1/
 site_author: Ooi Wei Tsang
-site_description: "The website for UNIX Workshop"
+site_description: "The website for Unix Workshop"
 repo_url: "https://github.com/nus-unix-workshop/2021-s1"
 copyright: "This content is licensed under <a href=http://creativecommons.org/licenses/by-nc-sa/4.0/>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a> license."
 
@@ -9,10 +9,29 @@ theme:
   name: cinder
   colorscheme: github
   highlightjs: true
+  hljs_languages:
+     - PowerShell
+     - Bash
 
 nav:
   - Home: index.md
   - Schedule: schedule.md
+  - Setup:
+      - Setup for Windows 10: wsl.md
+      - Setup for macOS: mac.md
+      - Setup tmate: tmate.md
+  - Notes:
+      - Why Unix?: why-unix.md
+      - Why CLI?: why-cli.md
+      - Terminal and Shell: shell.md
+
+extra_css:
+  - "css/ooiwt.css"
+
+shortcuts:
+    previous: 76 # l
+    next: 72     # h
+    search: 191  # /
 
 markdown_extensions:
   - admonition
@@ -26,6 +45,7 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.inlinehilite
+  - pymdownx.keys
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
