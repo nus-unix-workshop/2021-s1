@@ -27,22 +27,22 @@ The term CLI refers to a type of user interface.  To realize this
 interface, Unix computing environments rely on another type of
 program called _shell_.  
 
-A shell usually works closely with terminal to get inputs from the
+A shell usually works closely with a terminal to get inputs from the
 users, interpret the meaning of the inputs, execute the tasks
-(perhaps through invocation of other programs), and returned the
+(perhaps through the invocation of other programs), and returned the
 output back to the user through the terminal.
 
-Note that it is possible for a shell to run on its own without a 
+Note that a shell can run on its own without a 
 terminal (it can read input from a file, and write the output to a
 file, for instance).
 
 There are many shells available, each with different bells and 
-wistles to help improve our productivity.  
+whistles to help improve our productivity.  
 
-The most popular shell that comes as default on many Unix system
+The most popular shell that comes as default on many Unix systems
 is `bash`, or Bourne Again Shell.  This is the shell that we will
-use in this workshop and as default in SoC Unix computing environment.
+use in this workshop and as default in the SoC Unix computing environment.
 
 I (Wei Tsang) personally use [`fish`](https://fishshell.com/) for 
 my day-to-day work.  [Oh-my-zsh](https://ohmyz.sh/) (`zsh`) is 
-another shell popular among experience users.
+another shell popular among experienced users.
