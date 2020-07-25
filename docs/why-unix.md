@@ -2,9 +2,9 @@
 
 ## History of Unix
 
-To understand what the word _Unix_ means and to appreciate its
-importance, we need to know the history of computing.  So, let's
-start with a glimpse into the history book.
+To understand what _Unix_ is and to appreciate its
+importance, let's
+take a glimpse into the history book.
 
 Early computers, in the 1940s and early 1950s, do not have an
 operating system.  Every program will have to be designed specifically
@@ -28,18 +28,17 @@ hardware management (e.g., hide the tedious operations of
 interfacing with memory and storage from the programmer).
 
 One of the defining development in the 1960s is the idea of time
-sharing - allowing multiple programs to be submitted to run at the
-same time on the computer remotely.  Time sharing is revolutionary
-since users do not have to queue or schedule a slotted time to run
-a program on a computer.  In the late 1960s, with the early Internet,
-users can remotely access a computer.  Thus, users do not have to
-be physically in the computer room to use the computer.
+sharing - allowing computer time to be shared by
+multiple users.  Time sharing is revolutionary
+since users no longer have to queue or schedule a slotted time to run
+a program on a computer.  The early operating system that enables
+time sharing, however, is complex, difficult to use, and bloated
+with features.
 
 Unix is an operating system that was developed in the late 1960s and 
-early 1970s around these revolutions, by Dennis Ritchie and Ken 
+early 1970s around this revolution, by Dennis Ritchie and Ken 
 Thompson from Bell Laboratories.  Learning from the mistakes of the
-past operating systems, which tend to be difficult to use and bloated
-with features, the duo set to develop an operating system with _simplicity_
+past operating systems, the duo set to develop an operating system with _simplicity_
 and _elegance_ at the core of its design.  Part of the push towards
 simplicity is also due to the lack of powerful computers in many 
 places at that time -- the design constraints has lead to design 
