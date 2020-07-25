@@ -13,14 +13,14 @@ the computer at one time.  To run a program, a user will have to
 carry a stack of punch cards or tapes into the computer room and
 load them into the computer at a scheduled time.
 
-As the computers become more sophisticated and the demand to run
+As computers become more sophisticated and the demand to run
 programs on the machine increases, humans operators are hired to
 manage the requests to run the programs, and these human operators
 have to manually schedule and manage the time allocated to each
 program on the machine.
 
 These tasks are slowly being replaced by a layer of software that
-runs on the computers starting late 1950s.  Termed _operating
+runs on the computers starting the late 1950s.  Termed _operating
 systems_, this system software helps to manage "which program runs
 when", and it includes more functionalities such as resource
 accounting (e.g., which user used how much time on the machine) and
@@ -29,20 +29,20 @@ interfacing with memory and storage from the programmer).
 
 One of the defining development in the 1960s is the idea of time
 sharing - allowing computer time to be shared by
-multiple users.  Time sharing is revolutionary
+multiple users.  Time-sharing is revolutionary
 since users no longer have to queue or schedule a slotted time to run
 a program on a computer.  The early operating system that enables
-time sharing, however, is complex, difficult to use, and bloated
+time-sharing, however, is complex, difficult to use, and bloated
 with features.
 
 Unix is an operating system that was developed in the late 1960s and 
-early 1970s around this revolution, by Dennis Ritchie and Ken 
+the early 1970s around this revolution, by Dennis Ritchie and Ken 
 Thompson from Bell Laboratories.  Learning from the mistakes of the
 past operating systems, the duo set to develop an operating system with _simplicity_
 and _elegance_ at the core of its design.  Part of the push towards
 simplicity is also due to the lack of powerful computers in many 
-places at that time -- the design constraints has lead to design 
-decisions that favour economy.
+places at that time -- the design constraints have lead to design 
+decisions that favor economy.
 
 <br><div align=center>
 <a title="Peter Hamer / CC BY-SA (https://creativecommons.org/licenses/by-sa/2.0)" href="https://commons.wikimedia.org/wiki/File:Ken_Thompson_(sitting)_and_Dennis_Ritchie_at_PDP-11_(2876612463).jpg"><img width="512" alt="Ken Thompson (sitting) and Dennis Ritchie at PDP-11 (2876612463)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ken_Thompson_%28sitting%29_and_Dennis_Ritchie_at_PDP-11_%282876612463%29.jpg/512px-Ken_Thompson_%28sitting%29_and_Dennis_Ritchie_at_PDP-11_%282876612463%29.jpg"></a>
@@ -55,26 +55,26 @@ operating system, leading to over 600 installations reported by 1974[^3].
 Closely tied to the rise of Unix is the invention of C, a programming
 language that Dennis Ritchie and Ken Thompson used to write Unix in.
 This is revolutionary by itself, as programmers can then write tools
-and programmes in a higher level structured language, rather than in 
-low level assembly languages as in the operating systems before.
+and programs in a higher level structured language, rather than in 
+low-level assembly languages as in the operating systems before.
 
-As a result of these development, Unix is the first operating system
-where programmers can write and run program on the fly in front of a
-terminal.  This ability leads to a pleatora of contributions to Unix
+As a result of this development, Unix is the first operating system
+where programmers can write and run a program on the fly in front of a
+terminal.  This ability leads to a plethora of contributions to Unix
 systems, utilities, and tools in the 1970s, fueling its popularity 
 among the developers.
 
 The ease of programming and its superiority in terms of simplicity
-has lead to emergence of variants of the original Unix operating
+has lead to the emergence of variants of the original Unix operating
 systems, developed by modifying the original Unix source code. 
-The Berkeley Software Distribution (BSD) is among most important 
-ones (macOS is its decendant).  Another notable decendant from the
+The Berkeley Software Distribution (BSD) is among the most important ones 
+(macOS is a descendant of BSD).  Another notable descendant from the
 original Unix is Solaris, from Sun Microsystem (now Oracle), which
 the School of Computing runs on its computing server (called `sunfire`).
 
 Another variant of Unix is Linux -- which interestingly is developed
 from scratch as a hobby initially by Linus Torvalds at the age of 21.
-Linux follows many of the principles of Unix, but is not based on the 
+Linux follows many of the principles of Unix but is not based on the 
 original Unix source code.
 
 <br><div align="center">
@@ -82,13 +82,13 @@ original Unix source code.
 <br>Figure: Unix and Unix-like Operating Systems.
 </div><br>
 
-While a majority of personal desktop is still running Microsoft Windows 
-10 (88%), a vast majority of server software is running on some flavour 
+While a majority of personal computers is still running Microsoft Windows 
+10 (88%), a vast majority of server software is running on some flavor 
 of Unix (>70%)[^1].  Almost all mobile phones are running on a variant of Unix 
 (iOS, Android).  Among software developers, more than half (53%) uses a 
 Unix-based OS on the primary work machines[^2].  Microsoft, after years of
 competing with Unix-based OS, has started to embrace Unix-based systems
-and released the Windows Subsystems for Linux, allowing Windows user
+and released the Windows Subsystems for Linux, allowing Windows users
 to run a sandboxed Linux subsystems within Windows.
 
 We collectively call these variants of operating systems and subsystems
@@ -102,15 +102,15 @@ Microsoft Windows 10.
 There are several reasons:
 
 - Unix-based OS is the dominant operating system in the world, and
-as a computing student, it is likely that you will have to interface
+as a computing student, you will likely have to interface
 with one sometime in your career.
 
-- Unix design is rooted at its simplicity and economy.  It is
+- Unix design is rooted in its simplicity and economy.  It is
 probably the most _productive_ programming environment you can have
 to do most of your day-to-day tasks and to develop software as a
 computing professional.
 
-- Unix design is also rooted at its programmability.  If there is
+- Unix design is also rooted in its programmability.  If there is
 something that you wish to automate a task to improve your productivity,
 you can easily compose new tools from the existing ones.
 
