@@ -13,7 +13,7 @@ Run
 xcode-select --install
 ```
 
-to install a set of command line tools used for software development in macOS.
+to install a set of command-line tools used for software development in macOS.
 
 ### Install Homebrew
 
