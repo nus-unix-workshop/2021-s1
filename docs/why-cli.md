@@ -1,4 +1,4 @@
-# Command-Line Interfaces
+# Unit 2: Command-Line Interfaces
 
 ## What is Command-Line Interfaces?
 
@@ -42,6 +42,14 @@ research has shown that GUI and mouse are great for casual users,
 for software developers that need to type on the keyboard most of
 the time, having to switch between keyboard and mouse is a
 productivity-killer.
+
+Further, CLI commands typically provides a host of options that is
+accessible directly (including of clicking through preference dialogues)
+from the command line, making these commands flexible and customizable.
+
+Finally, since these commands are just text, we can put together a
+sequence of commands easily as a _script_, to automate highly repetitive
+tasks.
 
 ## References
 - [The Art of Unix Usability: Command Line Interfaces](http://www.catb.org/~esr/writings/taouu/taouu.html#id3017631), by Eric Steven Raymond

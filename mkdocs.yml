@@ -8,7 +8,7 @@ copyright: "This content is licensed under <a href=http://creativecommons.org/li
 theme:
   name: cinder
   colorscheme: github
-  highlightjs: true
+  highlightjs: false
   hljs_languages:
      - PowerShell
      - Bash
@@ -21,9 +21,15 @@ nav:
       - Setup for macOS: mac.md
       - Setup tmate: tmate.md
   - Notes:
-      - Why Unix?: why-unix.md
-      - Why CLI?: why-cli.md
-      - Terminal and Shell: shell.md
+      - 1. Why Unix?: why-unix.md
+      - 2. Why CLI?: why-cli.md
+      - 3. Terminal and Shell: shell.md
+      - 4. Path and Navigation : path-nav.md
+      - 5. File Management : file-management.md
+      - 6. File Permissions : chmod.md
+      - 7. Standard I/O: stdio.md
+      - 8. Composition with Pipe: pipe.md
+      - 9. Pattern Matching: pattern.md
 
 extra_css:
   - "css/ooiwt.css"
@@ -36,14 +42,14 @@ shortcuts:
 markdown_extensions:
   - admonition
   - fontawesome_markdown
-  - codehilite:
-     linenums: true
   - footnotes
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
   - pymdownx.critic
+  - pymdownx.highlight:
+      linenums: false
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink

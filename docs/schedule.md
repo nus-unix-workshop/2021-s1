@@ -5,45 +5,30 @@
 ## Day 1
 ### Plenary Session 1: Introduction (20 minutes)
 
-- [What is Unix?  Why are we learning/using Unix?](why-unix.md)
-- [What is CLI? Why are we learning/using CLI?](why-cli.md)
-- [What is a terminal? What is a shell?](shell.md)
+- 1: [What is Unix?  Why are we learning/using Unix?](why-unix.md)
+- 2: [What is CLI? Why are we learning/using CLI?](why-cli.md)
+- 3: [What is a terminal? What is a shell?](shell.md)
 
 ### Breakout Session 2: Basic Unix Files Operations I (30 minutes) 
 
-- Install WSL and Windows Terminal
-- Installing tmate for terminal sharing
-- File Organization
-    - Root directory
-    - Home directory
-	- Looking inside a directory (`ls`)
-    - Directory tree
-    - Navigating around the directory tree (`cd`)
-    - Shortcut: `.` `~`, `..`
-    - Bash shortcut (tab, up arrow)
-    - Referring to manuals (`man`)
+- Setup a Unix computing environment on [Windows 10](wsl.md) or [macOS](mac.md)
+- [Installing tmate for terminal sharing](tmate.md)
+- 4: [Directories, paths, and navigation](path-nav.md)
 
 #### Break (20 minutes)
 
 ### Breakout Session 3:  Basic Unix Files Operations II (20 minutes) 
 
-- Making and removing your own directory (`mkdir` and `rm`)
-- Creating, moving, and copying files (`touch`, `mv`, `cp`)
-- Looking inside a file (`cat`, `more`, `less`)
-- File permissions (`chmod`)
+- 5: [File management](file-management.md)
+- 6: [Permission management](chmod.md)
 
 #### Break (20 minutes)
 
 ### Breakout Session 4: Composition (30 minutes)
 
-- Standard output and standard input
-- Redirection (`<`, `>`, `>>`)
-- Piping (`|`)
-- Pattern matching in bash (`*`, `?`, `{}`)
-- Unix power tools:
-    - Looking for something in a file (`grep`)
-    - Comparing two files (`diff`)
-    - Counting lines, words, and characters (`wc`)
+- 7: [Standard I/O](stdio.md)
+- 8: [Piping](pipe.md)
+- 9: [Pattern Matching](pattern.md)
 
 ## DAY 2
 ### Plenary Session 5: Gaining Efficiency with Unix (10 minutes)
