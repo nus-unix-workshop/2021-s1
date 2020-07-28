@@ -42,7 +42,7 @@ You can achieve this step by:
 
 ### Step 3: Install Ubuntu 
 
-After restarting your computer, go to the <a href="https://aka.ms/wslstore">Microsoft Store</a> and get <a href="https://www.microsoft.com/en-sg/p/ubuntu-2004-lts/9n6svws3rx71?rtc=1&activetab=pivot:overviewtab">Ubuntu</a>.
+After restarting your computer, go to the <a href="https://aka.ms/wslstore">Microsoft Store</a> and get <a href="https://www.microsoft.com/en-sg/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab">Ubuntu</a>.
 
 Follow the on-screen instructions to install.  
 
