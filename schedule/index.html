@@ -23,10 +23,8 @@
     <link href="../css/base.min.css" rel="stylesheet">
     <link href="../css/cinder.min.css" rel="stylesheet">
 
-    
-        
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
-        
+     
+
     
     <link href="../css/ooiwt.css" rel="stylesheet">
 
@@ -113,19 +111,55 @@
                         
                             
 <li >
-    <a href="../why-unix/">Why Unix?</a>
+    <a href="../why-unix/">1. Why Unix?</a>
 </li>
 
                         
                             
 <li >
-    <a href="../why-cli/">Why CLI?</a>
+    <a href="../why-cli/">2. Why CLI?</a>
 </li>
 
                         
                             
 <li >
-    <a href="../shell/">Terminal and Shell</a>
+    <a href="../shell/">3. Terminal and Shell</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../path-nav/">4. Path and Navigation</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../file-management/">5. File Management</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../chmod/">6. File Permissions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../stdio/">7. Standard I/O</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../pipe/">8. Composition with Pipe</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../pattern/">9. Pattern Matching</a>
 </li>
 
                         
@@ -188,47 +222,28 @@
 <h2 id="day-1">Day 1</h2>
 <h3 id="plenary-session-1-introduction-20-minutes">Plenary Session 1: Introduction (20 minutes)</h3>
 <ul>
-<li><a href="../why-unix/">What is Unix?  Why are we learning/using Unix?</a></li>
-<li><a href="../why-cli/">What is CLI? Why are we learning/using CLI?</a></li>
-<li><a href="../shell/">What is a terminal? What is a shell?</a></li>
+<li>1: <a href="../why-unix/">What is Unix?  Why are we learning/using Unix?</a></li>
+<li>2: <a href="../why-cli/">What is CLI? Why are we learning/using CLI?</a></li>
+<li>3: <a href="../shell/">What is a terminal? What is a shell?</a></li>
 </ul>
 <h3 id="breakout-session-2-basic-unix-files-operations-i-30-minutes">Breakout Session 2: Basic Unix Files Operations I (30 minutes)</h3>
 <ul>
-<li>Install WSL and Windows Terminal</li>
-<li>Installing tmate for terminal sharing</li>
-<li>File Organization<ul>
-<li>Root directory</li>
-<li>Home directory</li>
-<li>Looking inside a directory (<code>ls</code>)</li>
-<li>Directory tree</li>
-<li>Navigating around the directory tree (<code>cd</code>)</li>
-<li>Shortcut: <code>.</code> <code>~</code>, <code>..</code></li>
-<li>Bash shortcut (tab, up arrow)</li>
-<li>Referring to manuals (<code>man</code>)</li>
-</ul>
-</li>
+<li>Setup a Unix computing environment on <a href="../wsl/">Windows 10</a> or <a href="../mac/">macOS</a></li>
+<li><a href="../tmate/">Installing tmate for terminal sharing</a></li>
+<li>4: <a href="../path-nav/">Directories, paths, and navigation</a></li>
 </ul>
 <h4 id="break-20-minutes">Break (20 minutes)</h4>
 <h3 id="breakout-session-3-basic-unix-files-operations-ii-20-minutes">Breakout Session 3:  Basic Unix Files Operations II (20 minutes)</h3>
 <ul>
-<li>Making and removing your own directory (<code>mkdir</code> and <code>rm</code>)</li>
-<li>Creating, moving, and copying files (<code>touch</code>, <code>mv</code>, <code>cp</code>)</li>
-<li>Looking inside a file (<code>cat</code>, <code>more</code>, <code>less</code>)</li>
-<li>File permissions (<code>chmod</code>)</li>
+<li>5: <a href="../file-management/">File management</a></li>
+<li>6: <a href="../chmod/">Permission management</a></li>
 </ul>
 <h4 id="break-20-minutes_1">Break (20 minutes)</h4>
 <h3 id="breakout-session-4-composition-30-minutes">Breakout Session 4: Composition (30 minutes)</h3>
 <ul>
-<li>Standard output and standard input</li>
-<li>Redirection (<code>&lt;</code>, <code>&gt;</code>, <code>&gt;&gt;</code>)</li>
-<li>Piping (<code>|</code>)</li>
-<li>Pattern matching in bash (<code>*</code>, <code>?</code>, <code>{}</code>)</li>
-<li>Unix power tools:<ul>
-<li>Looking for something in a file (<code>grep</code>)</li>
-<li>Comparing two files (<code>diff</code>)</li>
-<li>Counting lines, words, and characters (<code>wc</code>)</li>
-</ul>
-</li>
+<li>7: <a href="../stdio/">Standard I/O</a></li>
+<li>8: <a href="../pipe/">Piping</a></li>
+<li>9: <a href="../pattern/">Pattern Matching</a></li>
 </ul>
 <h2 id="day-2">DAY 2</h2>
 <h3 id="plenary-session-5-gaining-efficiency-with-unix-10-minutes">Plenary Session 5: Gaining Efficiency with Unix (10 minutes)</h3>
@@ -293,13 +308,8 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap-3.0.3.min.js"></script>
 
+      <!-- default is to include highlightjs -->
     
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
-        
-                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/PowerShell.min.js"></script>
-                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/Bash.min.js"></script>
-        
-    <script>hljs.initHighlightingOnLoad();</script>
     
 
     <script>var base_url = ".."</script>

@@ -23,10 +23,8 @@
     <link href="../css/base.min.css" rel="stylesheet">
     <link href="../css/cinder.min.css" rel="stylesheet">
 
-    
-        
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
-        
+     
+
     
     <link href="../css/ooiwt.css" rel="stylesheet">
 
@@ -113,19 +111,55 @@
                         
                             
 <li >
-    <a href="../why-unix/">Why Unix?</a>
+    <a href="../why-unix/">1. Why Unix?</a>
 </li>
 
                         
                             
 <li >
-    <a href="../why-cli/">Why CLI?</a>
+    <a href="../why-cli/">2. Why CLI?</a>
 </li>
 
                         
                             
 <li >
-    <a href="../shell/">Terminal and Shell</a>
+    <a href="../shell/">3. Terminal and Shell</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../path-nav/">4. Path and Navigation</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../file-management/">5. File Management</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../chmod/">6. File Permissions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../stdio/">7. Standard I/O</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../pipe/">8. Composition with Pipe</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../pattern/">9. Pattern Matching</a>
 </li>
 
                         
@@ -171,6 +205,8 @@
                 
             <li class="second-level"><a href="#installing-tmate-on-macos">Installing tmate on macOS</a></li>
                 
+            <li class="second-level"><a href="#running-tmate">Running tmate</a></li>
+                
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
@@ -189,7 +225,43 @@
 <h2 id="installing-tmate-on-macos">Installing <code>tmate</code> on macOS</h2>
 <p>Run the following in your terminal:
 <div class="highlight"><pre><span></span><code>brew install tmate
-</code></pre></div></p></div>
+</code></pre></div></p>
+<h2 id="running-tmate">Running <code>tmate</code></h2>
+<p>To share your screen with someone you trust, run:</p>
+<div class="highlight"><pre><span></span><code>tmate
+</code></pre></div>
+
+<p>You should then see the following messages:</p>
+<div class="highlight"><pre><span></span><code>Tip: if you wish to use tmate only for remote access, run: tmate -F        [0/0]
+To see the following messages again, run in a tmate session: tmate show-messages
+Press &lt;q&gt; or &lt;ctrl-c&gt; to continue
+---------------------------------------------------------------------
+Connecting to ssh.tmate.io...
+Note: clear your terminal before sharing readonly access
+web session read only: https://tmate.io/t/ro-Zv6kbZxwLtc84NXnnFJtGvnYE
+ssh session read only: ssh ro-Zv6kbZxwLtc84NXnnFJtGvnYE@sgp1.tmate.io
+web session: https://tmate.io/t/3svwMBrjhwgp93QmZFHLnwzRP
+ssh session: ssh 3svwMBrjhwgp93QmZFHLnwzRP@sgp1.tmate.io
+</code></pre></div>
+
+<p>Note that your output will not be exactly the same as the above, particular, the seemingly gibberish text is randomly generated when
+you run <code>tmate</code>, so it will be a different gibberish every time.</p>
+<p>There are several important piece of information here:</p>
+<p>There are a list of links for you to share with your tutors.  Suppose your tutor wants to see (but not control) your screen through a web browser, you can send the link marked as <code>web session read only:</code> to him or her (e.g., via private chat in Zoom).  If your tutor needs to show you something on your shell through a web browser, you can send the link marked as <code>web session:</code> to him or her.  (In the example above: send <code>https://tmate.io/t/3svwMBrjhwgp93QmZFHLnwzRP</code>)</p>
+<p>If you do not copy down the links and need to access them later, just run <code>tmate show-messages</code>.</p>
+<p>Note that the links are randomly generated and are different every time you run <code>tmate</code>.</p>
+<p>Once you have copied and send the link to your tutor, press <span class="keys"><kbd class="key-q">Q</kbd></span> or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> to continue.  Your terminal is now shared with your tutor.  You can tell this as there is a small bar at the bottom of your terminal's screen.</p>
+<p>To stop sharing, hit <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-d">D</kbd></span> at the command prompt<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. </p>
+<p>Here is a small screencast to demonstrate this:</p>
+<p><a href="https://asciinema.org/a/sfHoPFqV2kqHk21v23nnHuqX6"><img alt="asciicast" src="https://asciinema.org/a/sfHoPFqV2kqHk21v23nnHuqX6.svg" /></a></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>For an overview of all special terminal <span class="keys"><kbd class="key-control">Ctrl</kbd></span> commands, see <a href="ctrl-seq.md">terminal control sequence</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></div>
         
         
     </div>
@@ -209,13 +281,8 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap-3.0.3.min.js"></script>
 
+      <!-- default is to include highlightjs -->
     
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
-        
-                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/PowerShell.min.js"></script>
-                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/Bash.min.js"></script>
-        
-    <script>hljs.initHighlightingOnLoad();</script>
     
 
     <script>var base_url = ".."</script>

@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The website for Unix Workshop">
     <meta name="author" content="Ooi Wei Tsang">
-    <link rel="canonical" href="https://nus-unix-workshop.github.io/2021-s1/wsl/">
+    <link rel="canonical" href="https://nus-unix-workshop.github.io/2021-s1/file-management/">
     <link rel="shortcut icon" href="../img/favicon.ico">
 
     
-    <title>Setup for Windows 10 - UNIX 101</title>
+    <title>5. File Management - UNIX 101</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -78,13 +78,13 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Setup <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
-<li class="active">
-    <a href="./">Setup for Windows 10</a>
+<li >
+    <a href="../wsl/">Setup for Windows 10</a>
 </li>
 
                         
@@ -105,7 +105,7 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notes <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -134,8 +134,8 @@
 
                         
                             
-<li >
-    <a href="../file-management/">5. File Management</a>
+<li class="active">
+    <a href="./">5. File Management</a>
 </li>
 
                         
@@ -176,17 +176,17 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../schedule/">
+                        <a rel="prev" href="../path-nav/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../mac/">
+                        <a rel="next" href="../chmod/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/nus-unix-workshop/2021-s1/edit/master/docs/wsl.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/nus-unix-workshop/2021-s1/edit/master/docs/file-management.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -198,76 +198,142 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#setting-up-unix-computing-environment-on-windows-10-with-wsl">Setting Up Unix Computing Environment on Windows 10 with WSL</a></li>
-            <li class="second-level"><a href="#requirements">Requirements</a></li>
+        <li class="first-level active"><a href="#unit-5-unix-file-management">Unit 5: Unix File Management</a></li>
+            <li class="second-level"><a href="#cp-copy-files">cp: CoPy files</a></li>
                 
-            <li class="second-level"><a href="#installing-wsl-1">Installing WSL 1</a></li>
+            <li class="second-level"><a href="#mv-move-or-rename-files">mv: MoVe or rename files</a></li>
                 
-                <li class="third-level"><a href="#step-1-enabling-wsl-on-windows-10-through-powershell">Step 1: Enabling WSL on Windows 10 through PowerShell</a></li>
-                <li class="third-level"><a href="#step-2-restart-your-computer">Step 2: Restart your computer</a></li>
-                <li class="third-level"><a href="#step-3-install-ubuntu">Step 3: Install Ubuntu</a></li>
-            <li class="second-level"><a href="#launching-wsl">Launching WSL</a></li>
+            <li class="second-level"><a href="#rm-remove-files">rm: ReMove files</a></li>
                 
-            <li class="second-level"><a href="#getting-ready-to-install-tools">Getting ready to install tools</a></li>
+            <li class="second-level"><a href="#cat-catenate-file-content-to-screen">cat: CATenate file content to screen</a></li>
+                
+            <li class="second-level"><a href="#man-online-manual">man: Online MANual</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="setting-up-unix-computing-environment-on-windows-10-with-wsl">Setting Up Unix Computing Environment on Windows 10 with WSL</h1>
-<p>WSL, or <em>Windows Subsystem for Linux</em>, is a subsystem that allows
-users to run a Unix computing environment within Windows 10.  This
-is the recommended method for having a local Unix computing 
-environment for your Windows 10 machine, for the purpose of
-CS1010, CS2030, CS2030S, and CS2040 in Semester 1, AY2020/21.</p>
-<p>There are two versions, WSL 1 and, a newer, WSL 2. </p>
-<p>For the Unix@Home workshop, it suffices for attendees
-to install WSL 1.</p>
-<h2 id="requirements">Requirements</h2>
-<p>Before you proceed with the instructions below, you need to make sure that:</p>
-<ul>
-<li>
-<p>You have 64-bit versions of Windows 10, version 1607 or higher 
-(<a href="https://support.microsoft.com/en-sg/help/13443/windows-which-version-am-i-running">Here is how you check</a>);</p>
-</li>
-<li>
-<p>You have administrator access to your Windows 10; And</p>
-</li>
-<li>
-<p>You have an SoC Unix account. You can <a href="https://mysoc.nus.edu.sg/~newacct">create an SoC Unix account here</a>.  For SoC students, this username is something that sticks with you for the rest of your SoC life -- so choose wisely.</p>
-</li>
-</ul>
-<h2 id="installing-wsl-1">Installing WSL 1</h2>
-<h3 id="step-1-enabling-wsl-on-windows-10-through-powershell">Step 1: Enabling WSL on Windows 10 through PowerShell</h3>
-<p>Before you install WSL 1, you need to first enable the "Windows Subsystem for Linux" feature by running the following command in PowerShell.</p>
-<div class="highlight"><pre><span></span><code><span class="n">dism</span><span class="p">.</span><span class="n">exe</span> <span class="p">/</span><span class="n">online</span> <span class="p">/</span><span class="nb">enable-feature</span> <span class="p">/</span><span class="n">featurename</span><span class="err">:</span><span class="n">Microsoft-Windows-Subsystem-Linux</span> <span class="p">/</span><span class="n">all</span> <span class="p">/</span><span class="n">norestart</span>
+<h1 id="unit-5-unix-file-management">Unit 5: Unix File Management</h1>
+<p>This note assumes that you are familiar with navigation with
+the Unix directory structure.</p>
+<p>We will now learn some commands to help us deal with files.</p>
+<p>Let's recreate the <code>workshop</code> directory in case you have already
+deleted it with the <code>rmdir</code> at the end of the last unit.</p>
+<div class="highlight"><pre><span></span><code>$ mkdir -p workshop
+$ cd workshop
+$ ls
 </code></pre></div>
 
-<p>You can achieve this step by:</p>
-<ul>
-<li>Hit <span class="keys"><kbd class="key-windows">Win</kbd></span> to open the Start menu, type <code>PowerShell</code>, then right-click on Windows PowerShell, and click "Run as administrator"</li>
-<li>Copy the command above by selecting it and then hitting <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span></li>
-<li>Go to your PowerShell window and paste the command above by hitting <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span>.  Press enter if needed to run the command. </li>
-</ul>
-<h3 id="step-2-restart-your-computer">Step 2: Restart your computer</h3>
-<h3 id="step-3-install-ubuntu">Step 3: Install Ubuntu</h3>
-<p>After restarting your computer, go to the <a href="https://aka.ms/wslstore">Microsoft Store</a> and get <a href="https://www.microsoft.com/en-sg/p/ubuntu-2004-lts/9n6svws3rx71?rtc=1&activetab=pivot:overviewtab">Ubuntu</a>.</p>
-<p>Follow the on-screen instructions to install.  </p>
-<p>When you are asked to create a user account and password, we suggest that you choose a Unix username that is that same as your SoC Unix username.  </p>
-<h2 id="launching-wsl">Launching WSL</h2>
-<p>To launch WSL, you can hit <span class="keys"><kbd class="key-windows">Win</kbd><span>+</span><kbd class="key-r">R</kbd></span> and type in <code>Ubuntu</code> followed by <span class="keys"><kbd class="key-enter">Enter</kbd></span>.  This should bring up the Unix command-line interface for you to interact with the Unix computing environment.</p>
-<h2 id="getting-ready-to-install-tools">Getting ready to install tools</h2>
-<p>WSL comes with <code>apt</code> as the package manager, which is a convenient way to list, search, install, update, and uninstall software and libraries in WSL.</p>
-<p>After you have set up WSL, run the following:
-<div class="highlight"><pre><span></span><code>sudo apt-get update
+<p>All of the above commands should complete successfully and <code>silently</code>.  Let's populate the directory with a new file.  Cut-and-paste the command below into the command prompt :</p>
+<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/nus-unix-workshop/2021-s1/master/test.txt
 </code></pre></div>
-What it does:</p>
-<ul>
-<li><code>apt-get</code> is a command to install, upgrade, and uninstall software and other packages in Ubuntu.</li>
-<li><code>apt-get update</code> asks <code>apt-get</code> to obtain the latest list of available packages from the Internet.</li>
-<li><code>sudo</code> performs <code>apt-get update</code> with a super-user's level permission.  This command may ask you to enter your password.
-   (Note: super-user means administrator in Unix).</li>
-</ul></div>
+
+<p>You should see a file being downloaded and saved with an output similar to below:
+<div class="highlight"><pre><span></span><code>--2020-07-27 15:26:49--  https://raw.githubusercontent.com/nus-unix-workshop/2021-s1/master/test.txt
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 64 [text/plain]
+Saving to: ‘test.txt’
+
+test.txt              100%[======================&gt;]      64  --.-KB/s    in 0s
+
+2020-07-27 15:26:50 (2.35 MB/s) - ‘test.txt’ saved [64/64]
+</code></pre></div></p>
+<p>Now run <code>ls</code>, and you should see that <code>ls</code> returns <code>test.txt</code> as the content of the current working directory.</p>
+<div class="highlight"><pre><span></span><code>$ ls
+test.txt
+</code></pre></div>
+
+<h3 id="cp-copy-files"><code>cp</code>: CoPy files</h3>
+<p>Now let's try to copy this file to another name.
+<div class="highlight"><pre><span></span><code>$ cp test.txt foo.txt
+$ ls
+test.txt foo.txt
+</code></pre></div>
+The command above copies the file <code>test.txt</code> into <code>foo.txt</code>.</p>
+<p>If you want to copy the whole directory, use <code>-r</code> flag, where <code>r</code> stands for copying recursively.</p>
+<p>Now let's create another directory called <code>copy</code>.
+<div class="highlight"><pre><span></span><code>$ cd ..
+$ mkdir copy
+$ cd copy
+$ ls
+</code></pre></div></p>
+<p>Run <code>pwd</code> to double-check that you are in the directory called <code>copy</code> that is at the same level as <code>workshop</code>.</p>
+<p>Now, we are going to use <code>cp</code> with the <code>-r</code> flag, to copy recursively the whole of <code>workshop</code> directory over.</p>
+<div class="highlight"><pre><span></span><code>$ cp -r ../workshop .
+</code></pre></div>
+
+<p>The command <code>cp</code> takes in two arguments, the first is the source, and the second is the destination.</p>
+<p>Note that we use <code>.</code> above to indicate that we wish to copy the whole sub-tree of <code>workshop</code> over the current directory.  The command should complete without any message.  Upon completion, you can run <code>ls</code> to double-check that the workshop directory exists under <code>workshop</code>.</p>
+<p>!!! Warning: <code>cp</code> Overwrites
+    If there is an existing file with the same name, <code>cp</code> will overwrite
+    the existing file without warning.</p>
+<h3 id="mv-move-or-rename-files"><code>mv</code>: MoVe or rename files</h3>
+<p>Now, let's change directory back to <code>workshop</code>.
+<div class="highlight"><pre><span></span><code>$ cd ../workshop
+</code></pre></div>
+and use the <code>mv</code> command to rename <code>foo.txt</code> into <code>bar.txt</code>.</p>
+<div class="highlight"><pre><span></span><code>$ ls
+foo.txt test.txt
+$ mv foo.txt bar.txt
+$ ls
+bar.txt test.txt
+</code></pre></div>
+
+<p>As you can see above, just like <code>cp</code>, <code>mv</code> takes in two arguments, the first is the source and the second is the destination.</p>
+<p>If the destination of <code>mv</code> is a directory, however, instead of renaming, the <code>mv</code> commands move the source to the destination directory.</p>
+<div class="highlight"><pre><span></span><code>$ ls
+bar.txt test.txt
+$ mv ../copy/workshop/foo.txt .
+$ ls
+bar.txt foo.txt test.txt
+</code></pre></div>
+
+<p>Here, you can see that we have moved <code>foo.txt</code> over to the current directory.</p>
+<p>!!! Warning: <code>mv</code> Overwrites
+    If there is an existing file with the same name, <code>mv</code> will overwrite
+    the existing file without warning.</p>
+<div class="admonition tip">
+<p class="admonition-title">Use <span class="keys"><kbd class="key-tab">Tab</kbd></span> for Name Completion</p>
+<p>If you have a very long file name, you may use the <code>bash</code> auto-completion feature to reduce typing. For instance, you may type:
+<div class="highlight"><pre><span></span><code>$ mv t
+</code></pre></div>
+and press the <span class="keys"><kbd class="key-tab">Tab</kbd></span> key, <code>bash</code> will complete the filename for you if there is only one filename with the prefix "t". Otherwise, it will fill up the filename to the point where you need to type in more characters for disambiguation.
+The <span class="keys"><kbd class="key-tab">Tab</kbd></span> key can also complete the name of a command.</p>
+</div>
+<h3 id="rm-remove-files"><code>rm</code>: ReMove files</h3>
+<p>We can use <code>rm</code> to remove files.
+Be careful with this command -- files deleted cannot be restored.  There is no trash or recycled bin like in Mac or Windows.</p>
+<div class="highlight"><pre><span></span><code>$ ls
+bar.txt foo.txt test.txt
+$ rm foo.txt
+$ ls
+bar.txt test.txt
+</code></pre></div>
+
+<div class="admonition warning">
+<p class="admonition-title">rm -rf </p>
+<p>While the Unix command line provides lots of flexibility and power, with great power comes great responsibility.  Some of the commands are extremely dangerous.  <code>rm -rf *</code> is the most famous one.  The notation <code>*</code> refers to all files, and the flag <code>-f</code> means forceful deletion (no question asked!), and <code>-r</code> means remove recursively everything under the current directory tree.  Accidentally running this command has ruined many lives.  <a href="https://www.quora.com/What-are-some-crazy-rm-rf-stories-you-have-heard-about">Read more here</a></p>
+</div>
+<p><code>rm</code> comes with a <code>-i</code> flag that interactively asks you if you are sure if you want to delete a file.  It is a good idea to always run <code>rm -i</code>.</p>
+<div class="highlight"><pre><span></span><code>$ rm -i bar.txt
+rm: remove regular file &#39;bar.txt&#39;?
+</code></pre></div>
+
+<p>Type <code>y</code> or <code>n</code> to answer yes or no respectively.</p>
+<h3 id="cat-catenate-file-content-to-screen"><code>cat</code>: CATenate file content to screen</h3>
+<p>To quickly take a look at the content of the file, use the <code>cat</code> command.</p>
+<div class="highlight"><pre><span></span><code>$ cat test.txt
+This is a <span class="nb">test</span> file <span class="k">for</span> learning Unix file management commands.
+</code></pre></div>
+
+<p><code>less</code> is a variant of <code>cat</code> that includes features to read each page leisurely and is useful for long files.
+<div class="highlight"><pre><span></span><code>$ less test.txt
+</code></pre></div></p>
+<p>In <code>less</code>, use <code>&lt;space&gt;</code> to move down one page, <code>b</code> to move Back up one page, and <code>q</code> to Quit.</p>
+<h3 id="man-online-manual"><code>man</code>: Online MANual</h3>
+<p>An online help facility is available in Unix via the <code>man</code> command (<code>man</code> stands for MANual). To look for more information about any Unix command, for example, <code>ls</code>, type <code>man ls</code>. Type <code>man man</code> and refer to Man Pages to find out more about the facility. To exit <code>man</code>, press <code>q</code>.</p></div>
         
         
     </div>

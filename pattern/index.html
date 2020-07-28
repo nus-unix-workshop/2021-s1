@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The website for Unix Workshop">
     <meta name="author" content="Ooi Wei Tsang">
-    <link rel="canonical" href="https://nus-unix-workshop.github.io/2021-s1/wsl/">
+    <link rel="canonical" href="https://nus-unix-workshop.github.io/2021-s1/pattern/">
     <link rel="shortcut icon" href="../img/favicon.ico">
 
     
-    <title>Setup for Windows 10 - UNIX 101</title>
+    <title>9. Pattern Matching - UNIX 101</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -78,13 +78,13 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Setup <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
-<li class="active">
-    <a href="./">Setup for Windows 10</a>
+<li >
+    <a href="../wsl/">Setup for Windows 10</a>
 </li>
 
                         
@@ -105,7 +105,7 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notes <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -158,8 +158,8 @@
 
                         
                             
-<li >
-    <a href="../pattern/">9. Pattern Matching</a>
+<li class="active">
+    <a href="./">9. Pattern Matching</a>
 </li>
 
                         
@@ -176,17 +176,17 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../schedule/">
+                        <a rel="prev" href="../pipe/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li >
-                        <a rel="next" href="../mac/">
+                    <li class="disabled">
+                        <a rel="next" >
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/nus-unix-workshop/2021-s1/edit/master/docs/wsl.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/nus-unix-workshop/2021-s1/edit/master/docs/pattern.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -198,76 +198,72 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#setting-up-unix-computing-environment-on-windows-10-with-wsl">Setting Up Unix Computing Environment on Windows 10 with WSL</a></li>
-            <li class="second-level"><a href="#requirements">Requirements</a></li>
+        <li class="first-level active"><a href="#unit-9-pattern-matching-in-bash">Unit 9: Pattern Matching in bash</a></li>
+            <li class="second-level"><a href="#example-1">Example 1:</a></li>
                 
-            <li class="second-level"><a href="#installing-wsl-1">Installing WSL 1</a></li>
+            <li class="second-level"><a href="#example-2">Example 2:</a></li>
                 
-                <li class="third-level"><a href="#step-1-enabling-wsl-on-windows-10-through-powershell">Step 1: Enabling WSL on Windows 10 through PowerShell</a></li>
-                <li class="third-level"><a href="#step-2-restart-your-computer">Step 2: Restart your computer</a></li>
-                <li class="third-level"><a href="#step-3-install-ubuntu">Step 3: Install Ubuntu</a></li>
-            <li class="second-level"><a href="#launching-wsl">Launching WSL</a></li>
-                
-            <li class="second-level"><a href="#getting-ready-to-install-tools">Getting ready to install tools</a></li>
+            <li class="second-level"><a href="#example-3">Example 3:</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="setting-up-unix-computing-environment-on-windows-10-with-wsl">Setting Up Unix Computing Environment on Windows 10 with WSL</h1>
-<p>WSL, or <em>Windows Subsystem for Linux</em>, is a subsystem that allows
-users to run a Unix computing environment within Windows 10.  This
-is the recommended method for having a local Unix computing 
-environment for your Windows 10 machine, for the purpose of
-CS1010, CS2030, CS2030S, and CS2040 in Semester 1, AY2020/21.</p>
-<p>There are two versions, WSL 1 and, a newer, WSL 2. </p>
-<p>For the Unix@Home workshop, it suffices for attendees
-to install WSL 1.</p>
-<h2 id="requirements">Requirements</h2>
-<p>Before you proceed with the instructions below, you need to make sure that:</p>
-<ul>
-<li>
-<p>You have 64-bit versions of Windows 10, version 1607 or higher 
-(<a href="https://support.microsoft.com/en-sg/help/13443/windows-which-version-am-i-running">Here is how you check</a>);</p>
-</li>
-<li>
-<p>You have administrator access to your Windows 10; And</p>
-</li>
-<li>
-<p>You have an SoC Unix account. You can <a href="https://mysoc.nus.edu.sg/~newacct">create an SoC Unix account here</a>.  For SoC students, this username is something that sticks with you for the rest of your SoC life -- so choose wisely.</p>
-</li>
-</ul>
-<h2 id="installing-wsl-1">Installing WSL 1</h2>
-<h3 id="step-1-enabling-wsl-on-windows-10-through-powershell">Step 1: Enabling WSL on Windows 10 through PowerShell</h3>
-<p>Before you install WSL 1, you need to first enable the "Windows Subsystem for Linux" feature by running the following command in PowerShell.</p>
-<div class="highlight"><pre><span></span><code><span class="n">dism</span><span class="p">.</span><span class="n">exe</span> <span class="p">/</span><span class="n">online</span> <span class="p">/</span><span class="nb">enable-feature</span> <span class="p">/</span><span class="n">featurename</span><span class="err">:</span><span class="n">Microsoft-Windows-Subsystem-Linux</span> <span class="p">/</span><span class="n">all</span> <span class="p">/</span><span class="n">norestart</span>
+<h1 id="unit-9-pattern-matching-in-bash">Unit 9: Pattern Matching in <code>bash</code></h1>
+<p>We now show you another productivity shortcut.  In an <a href="../pipe/">example earlier</a>, you have seen how we passed in more than one file names into <code>cat</code>.  Recall that we can use <span class="keys"><kbd class="key-tab">Tab</kbd></span> to auto-complete the file names, so we can hit fewer keys on the keyboards.<br />
+Now, we show you there is an even faster way.</p>
+<p>Instead of
+<div class="highlight"><pre><span></span><code>$ cat test.txt foo.txt bar.txt | wc
+</code></pre></div></p>
+<p>We could just run
+<div class="highlight"><pre><span></span><code>$ cat *.txt | wc
+</code></pre></div></p>
+<p>The <code>*</code> is a special character in <code>bash</code> that represents 0 or more characters.  So, this command essentially says, <code>cat</code> any files that contain 0 or more characters, followed by <code>.txt</code>.</p>
+<p>The table below summarizes the useful patterns:</p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Matches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*</code></td>
+<td>0 or more characters</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>one character</td>
+</tr>
+<tr>
+<td><code>[..]</code></td>
+<td>one character, coming from the given set between <code>[</code> and <code>]</code>, <code>-</code> to indicate a range.</td>
+</tr>
+<tr>
+<td><code>{.., ..}</code></td>
+<td>Either one of the names, separated by <code>,</code>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-1">Example 1:</h4>
+<div class="highlight"><pre><span></span><code>$ ls ???.txt
+bar.txt foo.txt
 </code></pre></div>
 
-<p>You can achieve this step by:</p>
-<ul>
-<li>Hit <span class="keys"><kbd class="key-windows">Win</kbd></span> to open the Start menu, type <code>PowerShell</code>, then right-click on Windows PowerShell, and click "Run as administrator"</li>
-<li>Copy the command above by selecting it and then hitting <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span></li>
-<li>Go to your PowerShell window and paste the command above by hitting <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span>.  Press enter if needed to run the command. </li>
-</ul>
-<h3 id="step-2-restart-your-computer">Step 2: Restart your computer</h3>
-<h3 id="step-3-install-ubuntu">Step 3: Install Ubuntu</h3>
-<p>After restarting your computer, go to the <a href="https://aka.ms/wslstore">Microsoft Store</a> and get <a href="https://www.microsoft.com/en-sg/p/ubuntu-2004-lts/9n6svws3rx71?rtc=1&activetab=pivot:overviewtab">Ubuntu</a>.</p>
-<p>Follow the on-screen instructions to install.  </p>
-<p>When you are asked to create a user account and password, we suggest that you choose a Unix username that is that same as your SoC Unix username.  </p>
-<h2 id="launching-wsl">Launching WSL</h2>
-<p>To launch WSL, you can hit <span class="keys"><kbd class="key-windows">Win</kbd><span>+</span><kbd class="key-r">R</kbd></span> and type in <code>Ubuntu</code> followed by <span class="keys"><kbd class="key-enter">Enter</kbd></span>.  This should bring up the Unix command-line interface for you to interact with the Unix computing environment.</p>
-<h2 id="getting-ready-to-install-tools">Getting ready to install tools</h2>
-<p>WSL comes with <code>apt</code> as the package manager, which is a convenient way to list, search, install, update, and uninstall software and libraries in WSL.</p>
-<p>After you have set up WSL, run the following:
-<div class="highlight"><pre><span></span><code>sudo apt-get update
+<p>Since we use three <code>?</code>, it matches any file name with three characters followed by <code>.txt</code>.</p>
+<h4 id="example-2">Example 2:</h4>
+<div class="highlight"><pre><span></span><code>$ ls [f-t]*t
+foo.txt test.txt
 </code></pre></div>
-What it does:</p>
-<ul>
-<li><code>apt-get</code> is a command to install, upgrade, and uninstall software and other packages in Ubuntu.</li>
-<li><code>apt-get update</code> asks <code>apt-get</code> to obtain the latest list of available packages from the Internet.</li>
-<li><code>sudo</code> performs <code>apt-get update</code> with a super-user's level permission.  This command may ask you to enter your password.
-   (Note: super-user means administrator in Unix).</li>
-</ul></div>
+
+<p>The expression <code>[f-t]*t</code> matches all file names the start with alphabet <code>f</code>, <code>g</code>, etc, until <code>t</code>, followed by zero or more characters, followed by <code>t</code>.</p>
+<h4 id="example-3">Example 3:</h4>
+<div class="highlight"><pre><span></span><code>$ ls {fo,ba}??txt
+foo.txt test.txt
+</code></pre></div>
+
+<p>The expression <code>{fo,ba}??txt</code> matches any file names the start with either <code>fo</code> or <code>ba</code>, followed by two characters, followed by <code>txt</code>.</p></div>
         
         
     </div>

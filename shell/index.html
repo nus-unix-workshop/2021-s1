@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../img/favicon.ico">
 
     
-    <title>Terminal and Shell - UNIX 101</title>
+    <title>3. Terminal and Shell - UNIX 101</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -23,10 +23,8 @@
     <link href="../css/base.min.css" rel="stylesheet">
     <link href="../css/cinder.min.css" rel="stylesheet">
 
-    
-        
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
-        
+     
+
     
     <link href="../css/ooiwt.css" rel="stylesheet">
 
@@ -113,19 +111,55 @@
                         
                             
 <li >
-    <a href="../why-unix/">Why Unix?</a>
+    <a href="../why-unix/">1. Why Unix?</a>
 </li>
 
                         
                             
 <li >
-    <a href="../why-cli/">Why CLI?</a>
+    <a href="../why-cli/">2. Why CLI?</a>
 </li>
 
                         
                             
 <li class="active">
-    <a href="./">Terminal and Shell</a>
+    <a href="./">3. Terminal and Shell</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../path-nav/">4. Path and Navigation</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../file-management/">5. File Management</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../chmod/">6. File Permissions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../stdio/">7. Standard I/O</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../pipe/">8. Composition with Pipe</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../pattern/">9. Pattern Matching</a>
 </li>
 
                         
@@ -146,8 +180,8 @@
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li class="disabled">
-                        <a rel="next" >
+                    <li >
+                        <a rel="next" href="../path-nav/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -164,16 +198,20 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#terminal-and-shell">Terminal and Shell</a></li>
+        <li class="first-level active"><a href="#unit-3-terminal-and-shell">Unit 3: Terminal and Shell</a></li>
             <li class="second-level"><a href="#what-is-a-terminal">What is a Terminal?</a></li>
                 
             <li class="second-level"><a href="#what-is-a-shell">What is a Shell?</a></li>
+                
+            <li class="second-level"><a href="#command-prompt">Command Prompt</a></li>
+                
+            <li class="second-level"><a href="#terminal-control-sequence">Terminal Control Sequence</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="terminal-and-shell">Terminal and Shell</h1>
+<h1 id="unit-3-terminal-and-shell">Unit 3: Terminal and Shell</h1>
 <h2 id="what-is-a-terminal">What is a Terminal?</h2>
 <p>With the advances in Cathode-ray tube (CRT), the teletype machine 
 is replaced with <em>computer terminals</em> in the late 1970s.  Instead of
@@ -190,7 +228,10 @@ to show to the users, but instead of these clunky special
 purpose devices, the functionality of a terminal is replaced
 by programs called <em>terminal emulator</em> or <em>virtual terminal</em>.
 Examples include <code>Terminal</code> and <code>iTerm2</code> on macOS; <code>Windows Terminal</code>
-on Microsoft; <code>xterm</code> and <code>konsole</code> on Ubuntu, etc.</p>
+on Microsoft; <code>xterm</code> and <code>konsole</code> on Ubuntu, etc.
+Many legacy control commands on these teletype machines remain
+in today's computing environment, such as the <a href="ctrl-seq.md">terminal control 
+sequence</a>.</p>
 <h2 id="what-is-a-shell">What is a Shell?</h2>
 <p>The term CLI refers to a type of user interface.  To realize this 
 interface, Unix computing environments rely on another type of
@@ -209,7 +250,43 @@ is <code>bash</code>, or Bourne Again Shell.  This is the shell that we will
 use in this workshop and as default in the SoC Unix computing environment.</p>
 <p>I (Wei Tsang) personally use <a href="https://fishshell.com/"><code>fish</code></a> for 
 my day-to-day work.  <a href="https://ohmyz.sh/">Oh-my-zsh</a> (<code>zsh</code>) is 
-another shell popular among experienced users.</p></div>
+another shell popular among experienced users.</p>
+<h2 id="command-prompt">Command Prompt</h2>
+<p>A shell has a <em>command prompt</em>. It typically looks something like this, but will be different depending on the default configuration on your machine:
+<div class="highlight"><pre><span></span><code>ooiwt@pe111:~$
+</code></pre></div></p>
+<p>The prompt is where you type in a command for the shell to interpret and execute.  </p>
+<p>In <code>bash</code>, the command prompt can be customized to include information such as the username, hostname, time, current working directory, etc.  It is customary to use the <code>$</code> sign as the final character of the prompt.  In our examples, we will just show <code>$</code> to incidate the command prompt.</p>
+<p>Depending on the habit, sometimes you are asked to type in a command "into the terminal", "into the shell", or "into bash".  They all mean the same thing: type in the command at the command prompt of the shell.</p>
+<h2 id="terminal-control-sequence">Terminal Control Sequence</h2>
+<p>On the old teletype machines (see <a href="./">history of command-line interfaces</a>), a user can send special commands to 
+the teletype machines to control its operation.  Many of these
+special commands still exists today, and can be triggered by
+with hitting a combination of <span class="keys"><kbd class="key-control">Ctrl</kbd></span> and another key (i.e.,
+a control sequence). </p>
+<p>The following lists some of the most useful control sequences
+to know:</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-d">D</kbd></span>
+:   signal the end of input to a program.  This is also used
+    to exit from a shell (by telling the shell that you have no more input
+    to send and you are done with it).</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>
+:   suspend the current running program.  This <em>pauses</em> the execution
+    of the program (but not terminating it).  In the <code>bash</code> shell, the most recently suspended program can resume executing in the background with the command <code>bg</code> or brought back to execution in the foreground again with the command <code>fg</code>.   </p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span>
+:   terminate the current running program.</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span>
+:   freeze the terminal.  This is a legacy control command that pauses the output printing of a teletype machine.  You shouldn't need to use this control sequence.</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-q">Q</kbd></span>
+:   resume the terminal.  This is a legacy control command that resume the printing of a teletype machine.  You shouldn't need to use this control sequence, unless you accidentally hit <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span></p>
+<div class="admonition note">
+<p class="admonition-title"><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> vs. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span></p>
+<p>A common mistake for new students is to hit <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> frequently if something goes wrong with their program -- this behavior leads to large number of suspended programs (which still occupy resources such as memory on the computer).  The right sequence to use is <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> -- which terminates the program (and frees up the resources).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title"><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> accidents</p>
+<p>Since <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> is used as the "save" shortcut in non-Unix environment, many students accidentally hit this contorl sequence, causing their terminal to freeze.  Don't panic if this happens.  Just hit <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-q">Q</kbd></span> and things will be back to normal.</p>
+</div></div>
         
         
     </div>
@@ -229,13 +306,8 @@ another shell popular among experienced users.</p></div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap-3.0.3.min.js"></script>
 
+      <!-- default is to include highlightjs -->
     
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
-        
-                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/PowerShell.min.js"></script>
-                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/Bash.min.js"></script>
-        
-    <script>hljs.initHighlightingOnLoad();</script>
     
 
     <script>var base_url = ".."</script>
