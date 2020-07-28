@@ -64,7 +64,7 @@ Once you have copied and send the link to your tutor, press ++q++ or ++ctrl+c++ 
 
 To stop sharing, hit ++ctrl+d++ at the command prompt[^1]. 
 
-[^1]: For an overview of all special terminal ++ctrl++ commands, see [terminal control sequence](ctrl-seq.md).
+[^1]: For an overview of all special terminal ++ctrl++ commands, see [terminal control sequence](shell.md).
 
 Here is a small screencast to demonstrate this:
 
