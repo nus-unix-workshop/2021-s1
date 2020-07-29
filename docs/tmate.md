@@ -16,7 +16,7 @@ Giving someone else full control of your computer is dangerous -- so you need to
 
 Run the following in your terminal:
 ```
-sudo apt-get install tmate
+sudo apt install tmate
 ```
 
 ## Installing `tmate` on macOS

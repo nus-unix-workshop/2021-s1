@@ -58,11 +58,11 @@ WSL comes with `apt` as the package manager, which is a convenient way to list, 
 
 After you have set up WSL, run the following:
 ```Bash
-sudo apt-get update
+sudo apt update
 ```
 What it does:
 
-- `apt-get` is a command to install, upgrade, and uninstall software and other packages in Ubuntu.
-- `apt-get update` asks `apt-get` to obtain the latest list of available packages from the Internet.
-- `sudo` performs `apt-get update` with a super-user's level permission.  This command may ask you to enter your password.
+- `apt` is a command to install, upgrade, search, and uninstall software and other packages in Ubuntu.
+- `apt update` asks `apt` to obtain the latest list of available packages from the Internet.
+- `sudo` performs `apt update` with a super-user's level permission.  This command may ask you to enter your password.
    (Note: super-user means administrator in Unix).
