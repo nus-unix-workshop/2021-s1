@@ -1,3 +1,4 @@
+set nocompatible
 filetype on " turn on filetype detecton 
 filetype plugin on " turn on plugin per filetype
 filetype indent on " turn on auto-indent per filetype
