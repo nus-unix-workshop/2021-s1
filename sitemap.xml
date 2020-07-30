@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://nus-unix-workshop.github.io/2021-s1/</loc>
-     <lastmod>2020-07-29</lastmod>
+     <lastmod>2020-07-30</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://nus-unix-workshop.github.io/2021-s1/schedule/</loc>
-     <lastmod>2020-07-29</lastmod>
+     <lastmod>2020-07-30</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://nus-unix-workshop.github.io/2021-s1/wsl/</loc>
-     <lastmod>2020-07-29</lastmod>
+     <lastmod>2020-07-30</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://nus-unix-workshop.github.io/2021-s1/mac/</loc>
-     <lastmod>2020-07-29</lastmod>
+     <lastmod>2020-07-30</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://nus-unix-workshop.github.io/2021-s1/tmate/</loc>
-     <lastmod>2020-07-29</lastmod>
+     <lastmod>2020-07-30</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://nus-unix-workshop.github.io/2021-s1/why-unix/</loc>
-     <lastmod>2020-07-29</lastmod>
+     <lastmod>2020-07-30</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://nus-unix-workshop.github.io/2021-s1/why-cli/</loc>
-     <lastmod>2020-07-29</lastmod>
+     <lastmod>2020-07-30</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://nus-unix-workshop.github.io/2021-s1/shell/</loc>
-     <lastmod>2020-07-29</lastmod>
+     <lastmod>2020-07-30</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://nus-unix-workshop.github.io/2021-s1/path-nav/</loc>
-     <lastmod>2020-07-29</lastmod>
+     <lastmod>2020-07-30</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://nus-unix-workshop.github.io/2021-s1/file-management/</loc>
-     <lastmod>2020-07-29</lastmod>
+     <lastmod>2020-07-30</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://nus-unix-workshop.github.io/2021-s1/chmod/</loc>
-     <lastmod>2020-07-29</lastmod>
+     <lastmod>2020-07-30</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://nus-unix-workshop.github.io/2021-s1/stdio/</loc>
-     <lastmod>2020-07-29</lastmod>
+     <lastmod>2020-07-30</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://nus-unix-workshop.github.io/2021-s1/pipe/</loc>
-     <lastmod>2020-07-29</lastmod>
+     <lastmod>2020-07-30</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://nus-unix-workshop.github.io/2021-s1/pattern/</loc>
-     <lastmod>2020-07-29</lastmod>
+     <lastmod>2020-07-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
