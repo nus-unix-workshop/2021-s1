@@ -3,6 +3,7 @@ filetype on " turn on filetype detecton
 filetype plugin on " turn on plugin per filetype
 filetype indent on " turn on auto-indent per filetype
 set linebreak " if the line is too long, soft-wrap it to the next line
+set wrapmargin=3 " num of chars before the end of screen to start wrapping
 set number " turn on line numbering
 set expandtab " no tabbing. <tab> is expanded into spaces
 set tabstop=4 " set tab to equal to four spaces
