@@ -138,6 +138,7 @@ Entering `cd` alone (without argument) brings you back to your home directory.
 `rmdir` removes a subDIRectory in the current directory -- note that a directory must be empty before it can be removed.
 
 The command
-```Bashs $ rmdir workshop
+```
+$ rmdir workshop
 ```
 will remove the directory that you just created.
