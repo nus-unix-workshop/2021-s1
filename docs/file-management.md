@@ -164,3 +164,8 @@ In `less`, use `<space>` to move down one page, `b` to move Back up one page, an
 ### `man`: Online MANual
 
 An online help facility is available in Unix via the `man` command (`man` stands for MANual). To look for more information about any Unix command, for example, `ls`, type `man ls`. Type `man man` and refer to Man Pages to find out more about the facility. To exit `man`, press `q`.
+
+## Other Useful Online Tools
+
+- [explainshell](https://explainshell.com/) explain each shell command for you
+
