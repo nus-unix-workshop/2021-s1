@@ -22,7 +22,7 @@ For instance, `r-x` has a numerical representation of 5, and `-wx` has a numeric
 
 ## The _Who_ of File Permissions
 
-Unix divides the users into three classes: `u` is the **u**ser who owns the file; `g` refers to the users in the same **g**roup as the user; and `o` are all the **o**ther users.
+Unix divides the users into three classes: `u` is the <b>u</b>ser who owns the file; `g` refers to the users in the same <b>g</b>roup as the user; and `o` are all the <b>o</b>ther users.
 
 The permissions can be controlled separately for these classes of users.  The permission notation simply concatenates the file permissions of each class of users together, in the order of `u`, `g`, and `o`.
 
