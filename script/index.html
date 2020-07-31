@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The website for Unix Workshop">
     <meta name="author" content="Ooi Wei Tsang">
-    <link rel="canonical" href="https://nus-unix-workshop.github.io/2021-s1/file-management/">
+    <link rel="canonical" href="https://nus-unix-workshop.github.io/2021-s1/script/">
     <link rel="shortcut icon" href="../img/favicon.ico">
 
     
-    <title>5. File Management - UNIX 101</title>
+    <title>13. Bash Scripting - UNIX 101</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -134,8 +134,8 @@
 
                         
                             
-<li class="active">
-    <a href="./">5. File Management</a>
+<li >
+    <a href="../file-management/">5. File Management</a>
 </li>
 
                         
@@ -182,8 +182,8 @@
 
                         
                             
-<li >
-    <a href="../script/">13. Bash Scripting</a>
+<li class="active">
+    <a href="./">13. Bash Scripting</a>
 </li>
 
                         
@@ -212,17 +212,17 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../path-nav/">
+                        <a rel="prev" href="../vim-practice/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../chmod/">
+                        <a rel="next" href="../ssh/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/nus-unix-workshop/2021-s1/edit/master/docs/file-management.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/nus-unix-workshop/2021-s1/edit/master/docs/script.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -234,148 +234,133 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#unit-5-unix-file-management">Unit 5: Unix File Management</a></li>
-            <li class="second-level"><a href="#cp-copy-files">cp: CoPy files</a></li>
+        <li class="first-level active"><a href="#unit-13-bash-scripts">Unit 13: bash Scripts</a></li>
+            <li class="second-level"><a href="#bashrc">.bashrc</a></li>
                 
-            <li class="second-level"><a href="#mv-move-or-rename-files">mv: MoVe or rename files</a></li>
+            <li class="second-level"><a href="#bash-environment-variables">Bash Environment Variables</a></li>
                 
-            <li class="second-level"><a href="#rm-remove-files">rm: ReMove files</a></li>
+            <li class="second-level"><a href="#simple-bash-scripts">Simple Bash Scripts</a></li>
                 
-            <li class="second-level"><a href="#cat-catenate-file-content-to-screen">cat: CATenate file content to screen</a></li>
-                
-            <li class="second-level"><a href="#man-online-manual">man: Online MANual</a></li>
-                
-            <li class="second-level"><a href="#other-useful-online-tools">Other Useful Online Tools</a></li>
+            <li class="second-level"><a href="#developing-an-automation-mind-set">Developing an Automation Mind Set</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="unit-5-unix-file-management">Unit 5: Unix File Management</h1>
-<p>This note assumes that you are familiar with navigation with
-the Unix directory structure.</p>
-<p>We will now learn some commands to help us deal with files.</p>
-<p>Let's recreate the <code>workshop</code> directory in case you have already
-deleted it with the <code>rmdir</code> at the end of the last unit.</p>
-<div class="highlight"><pre><span></span><code>$ mkdir -p workshop
-$ cd workshop
-$ ls
+<h1 id="unit-13-bash-scripts">Unit 13: <code>bash</code> Scripts</h1>
+<p>Now that we know the basic of text editing, we will start
+writing some simple bash scripts.  </p>
+<h2 id="bashrc"><code>.bashrc</code></h2>
+<p>First, let's write a bash script that will be executed every time
+we run bash.  Just like <code>.vimrc</code>, the "run commands" for <code>bash</code>
+is called <code>.bashrc</code>.  Recall that the <code>rc</code> files should be hidden
+and located in the home directory.</p>
+<p>So, start <code>vim</code> by</p>
+<div class="highlight"><pre><span></span><code>$ vim ~/.bashrc
 </code></pre></div>
 
-<p>All of the above commands should complete successfully and <code>silently</code>.  Let's populate the directory with a new file.  Cut-and-paste the command below into the command prompt :</p>
-<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/nus-unix-workshop/2021-s1/master/test.txt
+<p>and add the following lines at the bottom of <code>.bashrc</code>.</p>
+<p><div class="highlight"><pre><span></span><code>alias rm=&quot;rm -i&quot;
+alias mv=&quot;mv -i&quot;
+alias cp=&quot;cp -i&quot;
+echo &quot;.bashrc loaded&quot;
 </code></pre></div>
-
-<p>You should see a file being downloaded and saved with an output similar to below:
-<div class="highlight"><pre><span></span><code>--2020-07-27 15:26:49--  https://raw.githubusercontent.com/nus-unix-workshop/2021-s1/master/test.txt
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 64 [text/plain]
-Saving to: ‘test.txt’
-
-test.txt              100%[======================&gt;]      64  --.-KB/s    in 0s
-
-2020-07-27 15:26:50 (2.35 MB/s) - ‘test.txt’ saved [64/64]
-</code></pre></div></p>
-<p>Now run <code>ls</code>, and you should see that <code>ls</code> returns <code>test.txt</code> as the content of the current working directory.</p>
-<div class="highlight"><pre><span></span><code>$ ls
-test.txt
+If your <code>.bashrc</code> already contains some text, leave the existing text
+there.  Otherwise, you will see a splash screen about <code>vim</code>.  Just to
+into <code>INSERT</code> more to get rid of the splash screen.</p>
+<p>Remember that the <code>-i</code> flag causes these commands to interact with you
+and ask to confirm whether you want to remove/override a file.
+The <code>alias</code> command is used to create a new command.  Here,
+<div class="highlight"><pre><span></span><code>alias rm=&quot;rm -i&quot;
 </code></pre></div>
-
-<h3 id="cp-copy-files"><code>cp</code>: CoPy files</h3>
-<p>Now let's try to copy this file to another name.
-<div class="highlight"><pre><span></span><code>$ cp test.txt foo.txt
-$ ls
-test.txt foo.txt
+creates a new command called <code>rm</code> that does perform <code>rm -i</code>.  So now,
+every time you type <code>rm</code> in <code>bash</code>, <code>bash</code> will run <em>your</em> <code>rm</code>,
+which is just <code>rm -i</code> (the second <code>rm</code> is <code>bash</code>'s <code>rm</code>).</p>
+<p>Go ahead and hit <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-z">Z</kbd><span>+</span><kbd class="key-z">Z</kbd></span> to save and quit.  Now, exit <code>bash</code> and
+reload <code>bash</code> again.  You should see the message <code>.bashrc loaded</code>
+printed.</p>
+<p>Try to create a dummy file and remove it.  <code>bash</code> should now prompt you
+for confirmation.
+<div class="highlight"><pre><span></span><code>$ touch dummy
+$ rm dummy
+remove dummy?
 </code></pre></div>
-The command above copies the file <code>test.txt</code> into <code>foo.txt</code>.</p>
-<p>If you want to copy the whole directory, use <code>-r</code> flag, where <code>r</code> stands for copying recursively.</p>
-<p>Now let's create another directory called <code>copy</code>.
-<div class="highlight"><pre><span></span><code>$ cd ..
-$ mkdir copy
-$ cd copy
-$ ls
-</code></pre></div></p>
-<p>Run <code>pwd</code> to double-check that you are in the directory called <code>copy</code> that is at the same level as <code>workshop</code>.</p>
-<p>Now, we are going to use <code>cp</code> with the <code>-r</code> flag, to copy recursively the whole of <code>workshop</code> directory over.</p>
-<div class="highlight"><pre><span></span><code>$ cp -r ../workshop .
-</code></pre></div>
-
-<p>The command <code>cp</code> takes in two arguments, the first is the source, and the second is the destination.</p>
-<p>Note that we use <code>.</code> above to indicate that we wish to copy the whole sub-tree of <code>workshop</code> over the current directory.  The command should complete without any message.  Upon completion, you can run <code>ls</code> to double-check that the workshop directory exists under <code>workshop</code>.</p>
-<p>!!! Warning: <code>cp</code> Overwrites
-    If there is an existing file with the same name, <code>cp</code> will overwrite
-    the existing file without warning.</p>
-<h3 id="mv-move-or-rename-files"><code>mv</code>: MoVe or rename files</h3>
-<p>Now, let's change directory back to <code>workshop</code>.
-<div class="highlight"><pre><span></span><code>$ cd ../workshop
-</code></pre></div>
-and use the <code>mv</code> command to rename <code>foo.txt</code> into <code>bar.txt</code>.</p>
-<div class="highlight"><pre><span></span><code>$ ls
-foo.txt test.txt
-$ mv foo.txt bar.txt
-$ ls
-bar.txt test.txt
-</code></pre></div>
-
-<p>As you can see above, just like <code>cp</code>, <code>mv</code> takes in two arguments, the first is the source and the second is the destination.</p>
-<p>If the destination of <code>mv</code> is a directory, however, instead of renaming, the <code>mv</code> commands move the source to the destination directory.</p>
-<div class="highlight"><pre><span></span><code>$ ls
-bar.txt test.txt
-$ mv ../copy/workshop/foo.txt .
-$ ls
-bar.txt foo.txt test.txt
-</code></pre></div>
-
-<p>Here, you can see that we have moved <code>foo.txt</code> over to the current directory.</p>
-<p>!!! Warning: <code>mv</code> Overwrites
-    If there is an existing file with the same name, <code>mv</code> will overwrite
-    the existing file without warning.</p>
-<div class="admonition tip">
-<p class="admonition-title">Use <span class="keys"><kbd class="key-tab">Tab</kbd></span> for Name Completion</p>
-<p>If you have a very long file name, you may use the <code>bash</code> auto-completion feature to reduce typing. For instance, you may type:
-<div class="highlight"><pre><span></span><code>$ mv t
-</code></pre></div>
-and press the <span class="keys"><kbd class="key-tab">Tab</kbd></span> key, <code>bash</code> will complete the filename for you if there is only one filename with the prefix "t". Otherwise, it will fill up the filename to the point where you need to type in more characters for disambiguation.
-The <span class="keys"><kbd class="key-tab">Tab</kbd></span> key can also complete the name of a command.</p>
-</div>
-<h3 id="rm-remove-files"><code>rm</code>: ReMove files</h3>
-<p>We can use <code>rm</code> to remove files.
-Be careful with this command -- files deleted cannot be restored.  There is no trash or recycled bin like in Mac or Windows.</p>
-<div class="highlight"><pre><span></span><code>$ ls
-bar.txt foo.txt test.txt
-$ rm foo.txt
-$ ls
-bar.txt test.txt
-</code></pre></div>
-
-<div class="admonition warning">
-<p class="admonition-title">rm -rf </p>
-<p>While the Unix command line provides lots of flexibility and power, with great power comes great responsibility.  Some of the commands are extremely dangerous.  <code>rm -rf *</code> is the most famous one.  The notation <code>*</code> refers to all files, and the flag <code>-f</code> means forceful deletion (no question asked!), and <code>-r</code> means remove recursively everything under the current directory tree.  Accidentally running this command has ruined many lives.  <a href="https://www.quora.com/What-are-some-crazy-rm-rf-stories-you-have-heard-about">Read more here</a></p>
-</div>
-<p><code>rm</code> comes with a <code>-i</code> flag that interactively asks you if you are sure if you want to delete a file.  It is a good idea to always run <code>rm -i</code>.</p>
-<div class="highlight"><pre><span></span><code>$ rm -i bar.txt
-rm: remove regular file &#39;bar.txt&#39;?
-</code></pre></div>
-
-<p>Type <code>y</code> or <code>n</code> to answer yes or no respectively.</p>
-<h3 id="cat-catenate-file-content-to-screen"><code>cat</code>: CATenate file content to screen</h3>
-<p>To quickly take a look at the content of the file, use the <code>cat</code> command.</p>
-<div class="highlight"><pre><span></span><code>$ cat test.txt
-This is a <span class="nb">test</span> file <span class="k">for</span> learning Unix file management commands.
-</code></pre></div>
-
-<p><code>less</code> is a variant of <code>cat</code> that includes features to read each page leisurely and is useful for long files.
-<div class="highlight"><pre><span></span><code>$ less test.txt
-</code></pre></div></p>
-<p>In <code>less</code>, use <code>&lt;space&gt;</code> to move down one page, <code>b</code> to move Back up one page, and <code>q</code> to Quit.</p>
-<h3 id="man-online-manual"><code>man</code>: Online MANual</h3>
-<p>An online help facility is available in Unix via the <code>man</code> command (<code>man</code> stands for MANual). To look for more information about any Unix command, for example, <code>ls</code>, type <code>man ls</code>. Type <code>man man</code> and refer to Man Pages to find out more about the facility. To exit <code>man</code>, press <code>q</code>.</p>
-<h2 id="other-useful-online-tools">Other Useful Online Tools</h2>
+You can hit <span class="keys"><kbd class="key-y">Y</kbd></span> for yes or <span class="keys"><kbd class="key-n">N</kbd></span> for no.</p>
+<h2 id="bash-environment-variables">Bash Environment Variables</h2>
+<p>In addition to creating your customized commands, you can also
+affect the behavior of <code>bash</code> by configuring its environment
+variables.  An environment variable is something that can hold a
+value (just like <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span></script></span> in math).  The naming convention for an environment variable is to use all upper cases.</p>
+<p>The most common ones used are:</p>
 <ul>
-<li><a href="https://explainshell.com/">explainshell</a> explain each shell command for you</li>
-</ul></div>
+<li><code>PATH</code>: which is where <code>bash</code> would search for a command to execute.</li>
+<li><code>PS1</code>: which allows you to customize your command prompt.</li>
+<li><code>EDITOR</code>: which allows you to configure the default text editor.</li>
+</ul>
+<p>For <code>PS1</code> configuration, there are many neat examples on the
+Internet.  We recommend that you should least have your identity
+displayed somewhere on the command prompt so that the tutors
+know which terminal they are looking at via <code>tmate</code>.</p>
+<p>For <code>EDITOR</code>, you can set it to <code>vim</code>.</p>
+<p>Remember that earlier, to run <code>hello.sh</code>, we needed to include the
+prefix <code>./hello.sh</code>?  The <code>./</code> is to tell <code>bash</code> to look for the
+executable in the current directory.  To avoid typing <code>./</code> all the
+time (remember our goal: minimize finger movement), we can add <code>.</code>
+to the <code>PATH</code>.</p>
+<p>Now, <code>cd</code> into the directory where you have <code>hello.sh</code>, and type
+<div class="highlight"><pre><span></span><code>$ echo $PATH
+$ export PATH=$PATH:.
+$ echo $PATH
+</code></pre></div></p>
+<p>The first command shows you what the current <code>PATH</code> variable
+contains.  The <code>$</code> sign refers to the value of that variable instead of the variable name.  The <code>PATH</code> contains a list of paths in the directory structure, separated by <code>:</code>.</p>
+<p>In the second line, we add <code>.</code> (the current directory) to the <code>PATH</code>
+variable.  The third line checks if <code>.</code> is added correctly.</p>
+<p>If <code>.</code> is indeed added to the path, you can now run <code>hello.sh</code>
+without the prefix <code>./</code>.</p>
+<p>Note that there is a security risk in adding <code>.</code> to <code>PATH</code>.  My recommendation is only to do it on your personal Unix system (not a shared
+computing server) and add <code>.</code> only at the end of <code>PATH</code>.  See this
+<a href="http://www.faqs.org/faqs/unix-faq/faq/part2/section-13.html">FAQ</a>
+for more information.</p>
+<p>If you wish, you can now edit this line into <code>.bashrc</code>, so that it is
+executed every time you launch `bash.
+<div class="highlight"><pre><span></span><code>export PATH=$PATH:.
+</code></pre></div></p>
+<h2 id="simple-bash-scripts">Simple Bash Scripts</h2>
+<p>In addition to creating aliases, you can put commonly used commands in
+a <code>bash</code> script. The advantage is that it allows us to pass in
+arguments so that the script is more flexible.</p>
+<p>For instance, the following script finds out the size of a directory and
+the size of the largest subdirectory (in MBs)</p>
+<div class="highlight"><pre><span></span><code>#!/bin/bash
+du -m $1 | sort -n | tail -2
+</code></pre></div>
+
+<p>You can read the man pages for what <code>du</code>, <code>sort</code>, and <code>tail</code> and the
+various options do.  But the two interesting points we wish to point
+out are the first line:
+<div class="highlight"><pre><span></span><code>#!/bin/bash
+</code></pre></div>
+and the variable <code>$1</code>.</p>
+<p>The <code>#!</code> sequence is called <code>shebang</code>.  It is used by Unix to
+determine which interpreter to use to run this script.  It could be
+replaced with <code>/usr/bin/python</code> or other language interpreters, for
+instance.  But here, we meant this to be a <code>bash</code> script so we tell
+Unix to invoke <code>bash</code>.</p>
+<p>The variable <code>$1</code> will be replaced by the argument passed into the
+script on the command line.  Suppose that we save the script above as <code>dirsize.sh</code>.  Then you run:</p>
+<div class="highlight"><pre><span></span><code>dirsize.sh /usr/local
+</code></pre></div>
+
+<p><code>$1</code> will become <code>/usr/local</code> and so the size of <code>/usr/local</code> and its subdirectories will be determined.</p>
+<p>If you do not pass in any argument, <code>$1</code> will be empty, and the size
+of the current working directory will be determined instead.</p>
+<h2 id="developing-an-automation-mind-set">Developing an Automation Mind Set</h2>
+<p>If you find yourself typing the same command or sequence of commands
+over and over again, it is probably good to start creating a script
+to automate it.  </p>
+<p>You will need to invest some time upfront to get the script written
+and tested, but in the long run, it will save you time.</p></div>
         
         
     </div>
