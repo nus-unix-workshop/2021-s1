@@ -242,7 +242,7 @@ There are also many video
 tutorials and resources online.  Some interesting ones are:
 
 - [Vim: Precision Editing at the Speed of Thought](https://vimeo.com/53144573): A talk by Drew Neil
-- [Vim Adventure](www.vim-adventures.com): An adventure game for
+- [Vim Adventure](https://www.vim-adventures.com): An adventure game for
   learning `vim`
 - [Vim Casts](http://vimcasts.org/episodes/archive/): Videos and
   articles for teaching `vim`
