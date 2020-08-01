@@ -42,7 +42,9 @@ You can achieve this step by:
 
 ### Step 3: Install Ubuntu 
 
-After restarting your computer, go to the <a href="https://aka.ms/wslstore">Microsoft Store</a> and get <a href="https://www.microsoft.com/store/productId/9N9TNGVNDL3Q">Ubuntu</a>.
+After restarting your computer, go to the <a href="https://aka.ms/wslstore">Microsoft Store</a> and get <a href="https://www.microsoft.com/store/productId/9N9TNGVNDL3Q">Ubuntu</a> 18.04 LTS.[^1]
+
+[^1]: The latest Ubuntu 20.04 LTS is [reported](https://discourse.ubuntu.com/t/ubuntu-20-04-and-wsl-1/15291) reported to be unstable on WSL 1.
 
 Follow the on-screen instructions to install.  
 
