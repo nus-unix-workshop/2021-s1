@@ -301,8 +301,10 @@ foo.txt test.txt
 
 <p>The expression <code>[f-t]*t</code> matches all file names the start with alphabet <code>f</code>, <code>g</code>, etc, until <code>t</code>, followed by zero or more characters, followed by <code>t</code>.</p>
 <h4 id="example-3">Example 3:</h4>
-<div class="highlight"><pre><span></span><code>$ ls {fo,ba}??txt
-foo.txt test.txt
+<div class="highlight"><pre><span></span><code>$ ls *.txt
+bar.txt foo.txt test.txt
+$ ls {fo,ba}??txt   
+bar.txt foo.txt
 </code></pre></div>
 
 <p>The expression <code>{fo,ba}??txt</code> matches any file names the start with either <code>fo</code> or <code>ba</code>, followed by two characters, followed by <code>txt</code>.</p></div>
