@@ -79,5 +79,9 @@
      <loc>https://nus-unix-workshop.github.io/2021-s1/extra/</loc>
      <lastmod>2020-08-01</lastmod>
      <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://nus-unix-workshop.github.io/2021-s1/zoom/</loc>
+     <lastmod>2020-08-01</lastmod>
+     <changefreq>daily</changefreq>
     </url>
 </urlset>
