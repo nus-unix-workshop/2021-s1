@@ -16,7 +16,17 @@
 
 - [commandlinefu](https://www.commandlinefu.com/commands/browse/sort-by-votes)
 
-### Vim
+### Vim Tutorials
+
+- [Vim: Precision Editing at the Speed of Thought](https://vimeo.com/53144573): A talk by Drew Neil
+- [Vim Adventure](https://www.vim-adventures.com): An adventure game for
+  learning `vim`
+- [Vim Casts](http://vimcasts.org/episodes/archive/): Videos and
+  articles for teaching `vim`
+- [Vim Video Tutorials](http://derekwyatt.org/vim/tutorials/) by Derek Wyatt
+- [Vim Awesome](https://vimawesome.com/): Directory of plugins.
+
+### Vim Articles
 
 - [Time to Drop Emacs and Vi?](https://softwareengineering.stackexchange.com/questions/61738/time-to-drop-emacs-and-vi) on StackOverflow.  "_Programmers are notorious for using the tools that helps them get the job done in the most efficient way possible. These editors are ancient yet still being used because they are good, solid editors, proven by time. If they get the job done and get the job done well, why should we drop them in favor of something else?_"
 
