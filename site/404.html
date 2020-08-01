@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The website for UNIX Workshop">
+    <meta name="description" content="The website for Unix Workshop">
     <meta name="author" content="Ooi Wei Tsang">
     
     <link rel="shortcut icon" href="/2021-s1/img/favicon.ico">
 
     
-    <title>NUS SoC UNIX Workshop</title>
+    <title>UNIX 101</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -23,11 +23,10 @@
     <link href="/2021-s1/css/base.min.css" rel="stylesheet">
     <link href="/2021-s1/css/cinder.min.css" rel="stylesheet">
 
+     
+
     
-        
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
-        
-    
+    <link href="/2021-s1/css/ooiwt.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -58,7 +57,7 @@
 
             <!-- Main title -->
 
-            <a class="navbar-brand" href="/2021-s1/.">NUS SoC UNIX Workshop</a>
+            <a class="navbar-brand" href="/2021-s1/.">UNIX 101</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -75,6 +74,132 @@
                 
                     <li >
                         <a href="/2021-s1/schedule/">Schedule</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Setup <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="/2021-s1/wsl/">Setup for Windows 10</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="/2021-s1/mac/">Setup for macOS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="/2021-s1/tmate/">Setup tmate</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notes <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="/2021-s1/why-unix/">1. Why Unix?</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="/2021-s1/why-cli/">2. Why CLI?</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="/2021-s1/shell/">3. Terminal and Shell</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="/2021-s1/path-nav/">4. Path and Navigation</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="/2021-s1/file-management/">5. File Management</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="/2021-s1/chmod/">6. File Permissions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="/2021-s1/stdio/">7. Standard I/O</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="/2021-s1/pipe/">8. Composition with Pipe</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="/2021-s1/pattern/">9. Pattern Matching</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="/2021-s1/efficiency/">10. Productivity with Unix</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="/2021-s1/vim-intro/">11. Intro to Vim</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="/2021-s1/vim-practice/">12. Hands on with Vim</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="/2021-s1/script/">13. Bash Scripting</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="/2021-s1/ssh/">14. Remote Servers</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="/2021-s1/extra/">Extra</a>
                     </li>
                 
                 
@@ -123,13 +248,13 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="/2021-s1/js/bootstrap-3.0.3.min.js"></script>
 
+      <!-- default is to include highlightjs -->
     
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
-        
-    <script>hljs.initHighlightingOnLoad();</script>
     
 
     <script>var base_url = "/2021-s1/"</script>
+    
+        <script>var shortcuts = {"previous": 76, "next": 72, "search": 191}</script>
     
     <script src="/2021-s1/js/base.js"></script>
     <script src="/2021-s1/search/main.js"></script>

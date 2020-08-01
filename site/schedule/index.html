@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The website for UNIX Workshop">
+    <meta name="description" content="The website for Unix Workshop">
     <meta name="author" content="Ooi Wei Tsang">
     <link rel="canonical" href="https://nus-unix-workshop.github.io/2021-s1/schedule/">
     <link rel="shortcut icon" href="../img/favicon.ico">
 
     
-    <title>Schedule - NUS SoC UNIX Workshop</title>
+    <title>Schedule - UNIX 101</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -23,11 +23,10 @@
     <link href="../css/base.min.css" rel="stylesheet">
     <link href="../css/cinder.min.css" rel="stylesheet">
 
+     
+
     
-        
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
-        
-    
+    <link href="../css/ooiwt.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -58,7 +57,7 @@
 
             <!-- Main title -->
 
-            <a class="navbar-brand" href="..">NUS SoC UNIX Workshop</a>
+            <a class="navbar-brand" href="..">UNIX 101</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -78,6 +77,132 @@
                     </li>
                 
                 
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Setup <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../wsl/">Setup for Windows 10</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../mac/">Setup for macOS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../tmate/">Setup tmate</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notes <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../why-unix/">1. Why Unix?</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../why-cli/">2. Why CLI?</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../shell/">3. Terminal and Shell</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../path-nav/">4. Path and Navigation</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../file-management/">5. File Management</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../chmod/">6. File Permissions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../stdio/">7. Standard I/O</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../pipe/">8. Composition with Pipe</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../pattern/">9. Pattern Matching</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../efficiency/">10. Productivity with Unix</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../vim-intro/">11. Intro to Vim</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../vim-practice/">12. Hands on with Vim</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../script/">13. Bash Scripting</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../ssh/">14. Remote Servers</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../extra/">Extra</a>
+                    </li>
+                
+                
                 </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -91,8 +216,8 @@
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li class="disabled">
-                        <a rel="next" >
+                    <li >
+                        <a rel="next" href="../wsl/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -109,116 +234,74 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#tentative-schedule-for-the-workshop">Tentative Schedule for The Workshop</a></li>
+        <li class="first-level active"><a href="#tentative-schedule-for-unixhome-workshop">Tentative Schedule for Unix@Home Workshop</a></li>
             <li class="second-level"><a href="#day-1">Day 1</a></li>
                 
                 <li class="third-level"><a href="#plenary-session-1-introduction-20-minutes">Plenary Session 1: Introduction (20 minutes)</a></li>
-                <li class="third-level"><a href="#breakout-session-2-basic-unix-files-operations-i-30-minutes">Breakout Session 2: Basic UNIX Files Operations I (30 minutes)</a></li>
-                <li class="third-level"><a href="#breakout-session-3-basic-unix-files-operations-ii-20-minutes">Breakout Session 3:  Basic UNIX Files Operations II (20 minutes)</a></li>
+                <li class="third-level"><a href="#breakout-session-2-basic-unix-files-operations-i-30-minutes">Breakout Session 2: Basic Unix Files Operations I (30 minutes)</a></li>
+                <li class="third-level"><a href="#breakout-session-3-basic-unix-files-operations-ii-20-minutes">Breakout Session 3:  Basic Unix Files Operations II (20 minutes)</a></li>
                 <li class="third-level"><a href="#breakout-session-4-composition-30-minutes">Breakout Session 4: Composition (30 minutes)</a></li>
             <li class="second-level"><a href="#day-2">DAY 2</a></li>
                 
-                <li class="third-level"><a href="#plenary-session-5-gaining-efficiency-with-unix-10-minutes">Plenary Session 5: Gaining Efficiency with UNIX (10 minutes)</a></li>
+                <li class="third-level"><a href="#plenary-session-5-gaining-efficiency-with-unix-20-minutes">Plenary Session 5: Gaining Efficiency with Unix (20 minutes)</a></li>
                 <li class="third-level"><a href="#breakout-session-5-simple-file-editing-with-vim-30-minutes">Breakout Session 5: Simple file editing with vim (30 minutes)</a></li>
                 <li class="third-level"><a href="#breakout-session-6-very-basic-shell-scripts-30-minutes">Breakout Session 6: Very Basic Shell Scripts (30 minutes)</a></li>
-                <li class="third-level"><a href="#breakout-session-7-extending-your-unix-environment-20-minutes">Breakout Session 7: Extending your UNIX Environment (20 minutes)</a></li>
-                <li class="third-level"><a href="#breakout-session-8-remote-servers-10-minutes">Breakout Session 8: Remote Servers (10 minutes)</a></li>
-                <li class="third-level"><a href="#plenary-session-9-conclusion-and-the-unix-philosophy-15-minutes">Plenary Session 9: Conclusion and The UNIX Philosophy (15 minutes)</a></li>
+                <li class="third-level"><a href="#breakout-session-8-remote-servers-20-minutes">Breakout Session 8: Remote Servers (20 minutes)</a></li>
+                <li class="third-level"><a href="#plenary-session-9-conclusion-10-minutes">Plenary Session 9: Conclusion (10 minutes)</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="tentative-schedule-for-the-workshop">Tentative Schedule for The Workshop</h1>
-<p>Allocated time is a very rough approxmiate.</p>
+<h1 id="tentative-schedule-for-unixhome-workshop">Tentative Schedule for Unix@Home Workshop</h1>
+<p>(Note: Allocated time is a very rough approxmiate)</p>
 <h2 id="day-1">Day 1</h2>
 <h3 id="plenary-session-1-introduction-20-minutes">Plenary Session 1: Introduction (20 minutes)</h3>
 <ul>
-<li>UNIX: History, variants, importance</li>
-<li>Command-line interface: History, importance, advantages</li>
-<li>UNIX shells</li>
+<li>1: <a href="../why-unix/">What is Unix?  Why are we learning/using Unix?</a></li>
+<li>2: <a href="../why-cli/">What is CLI? Why are we learning/using CLI?</a></li>
+<li>3: <a href="../shell/">What is a terminal? What is a shell?</a></li>
 </ul>
-<h3 id="breakout-session-2-basic-unix-files-operations-i-30-minutes">Breakout Session 2: Basic UNIX Files Operations I (30 minutes)</h3>
+<h3 id="breakout-session-2-basic-unix-files-operations-i-30-minutes">Breakout Session 2: Basic Unix Files Operations I (30 minutes)</h3>
 <ul>
-<li>Install WSL and Windows Terminal</li>
-<li>Installing tmate for terminal sharing</li>
-<li>File Organization<ul>
-<li>Root directory</li>
-<li>Home directory</li>
-<li>Looking inside a directory (<code>ls</code>)</li>
-<li>Directory tree</li>
-<li>Navigating around the directory tree (<code>cd</code>)</li>
-<li>Shortcut: <code>.</code> <code>~</code>, <code>..</code></li>
-<li>Bash shortcut (tab, up arrow)</li>
-<li>Referring to manuals (<code>man</code>)</li>
-</ul>
-</li>
+<li>Setup a Unix computing environment on <a href="../wsl/">Windows 10</a> or <a href="../mac/">macOS</a></li>
+<li><a href="../tmate/">Installing tmate for terminal sharing</a></li>
+<li>4: <a href="../path-nav/">Directories, paths, and navigation</a></li>
 </ul>
 <h4 id="break-20-minutes">Break (20 minutes)</h4>
-<h3 id="breakout-session-3-basic-unix-files-operations-ii-20-minutes">Breakout Session 3:  Basic UNIX Files Operations II (20 minutes)</h3>
+<h3 id="breakout-session-3-basic-unix-files-operations-ii-20-minutes">Breakout Session 3:  Basic Unix Files Operations II (20 minutes)</h3>
 <ul>
-<li>Making and removing your own directory (<code>mkdir</code> and <code>rm</code>)</li>
-<li>Creating, moving, and copying files (<code>touch</code>, <code>mv</code>, <code>cp</code>)</li>
-<li>Looking inside a file (<code>cat</code>, <code>more</code>, <code>less</code>)</li>
-<li>File permissions (<code>chmod</code>)</li>
+<li>5: <a href="../file-management/">File management</a></li>
+<li>6: <a href="../chmod/">Permission management</a></li>
 </ul>
 <h4 id="break-20-minutes_1">Break (20 minutes)</h4>
 <h3 id="breakout-session-4-composition-30-minutes">Breakout Session 4: Composition (30 minutes)</h3>
 <ul>
-<li>Standard output and standard input</li>
-<li>Redirection (<code>&lt;</code>, <code>&gt;</code>, <code>&gt;&gt;</code>)</li>
-<li>Piping (<code>|</code>)</li>
-<li>Pattern matching in bash (<code>*</code>, <code>?</code>, <code>{}</code>)</li>
-<li>UNIX power tools:<ul>
-<li>Looking for something in a file (<code>grep</code>)</li>
-<li>Comparing two files (<code>diff</code>)</li>
-<li>Counting lines, words, and characters (<code>wc</code>)</li>
-</ul>
-</li>
+<li>7: <a href="../stdio/">Standard I/O</a></li>
+<li>8: <a href="../pipe/">Piping</a></li>
+<li>9: <a href="../pattern/">Pattern Matching</a></li>
 </ul>
 <h2 id="day-2">DAY 2</h2>
-<h3 id="plenary-session-5-gaining-efficiency-with-unix-10-minutes">Plenary Session 5: Gaining Efficiency with UNIX (10 minutes)</h3>
+<h3 id="plenary-session-5-gaining-efficiency-with-unix-20-minutes">Plenary Session 5: Gaining Efficiency with Unix (20 minutes)</h3>
 <ul>
-<li>Automation, Staying in Your Zone, and Powertools</li>
-<li>The philosophy and power of <code>vim</code></li>
+<li>10: <a href="../efficiency/">Producitivity with Unix</a></li>
+<li>11: <a href="../vim-intro/">The philosophy and power of <code>vim</code></a></li>
 </ul>
 <h3 id="breakout-session-5-simple-file-editing-with-vim-30-minutes">Breakout Session 5: Simple file editing with vim (30 minutes)</h3>
 <ul>
-<li>Running and quitting <code>vim</code></li>
-<li>Insert mode and command mode (i and esc)</li>
-<li>Moving cursor around with hjkl</li>
+<li>12: <a href="../vim-practice/">Hands-on with <code>vim</code></a></li>
 </ul>
 <h4 id="break-20-minutes_2">Break (20 minutes)</h4>
 <h3 id="breakout-session-6-very-basic-shell-scripts-30-minutes">Breakout Session 6: Very Basic Shell Scripts (30 minutes)</h3>
 <ul>
-<li>Putting a sequence of commands in a file and executing the file</li>
-<li>Command-line arguments and variables</li>
+<li>13: <a href="../script/">Bash Configuration and Scripting</a></li>
 </ul>
 <h4 id="break-20-minutes_3">Break (20 minutes)</h4>
-<h3 id="breakout-session-7-extending-your-unix-environment-20-minutes">Breakout Session 7: Extending your UNIX Environment (20 minutes)</h3>
+<h3 id="breakout-session-8-remote-servers-20-minutes">Breakout Session 8: Remote Servers (20 minutes)</h3>
 <ul>
-<li>Using <code>apt</code> (WSL) and <code>brew</code> (macOS), <code>curl</code></li>
-<li>install, list, search, uninstall</li>
-</ul>
-<h3 id="breakout-session-8-remote-servers-10-minutes">Breakout Session 8: Remote Servers (10 minutes)</h3>
-<ul>
-<li>Concepts of hosts, client, server.</li>
-<li>Accessing a remote server via <code>ssh</code></li>
-<li>Ssh into <code>sdf.org</code><ul>
-<li>Preview of SoC UNIX environments (<code>stu0</code>) </li>
-</ul>
-</li>
+<li>14: <a href="../ssh/">Accessing Remote Servers</a></li>
 </ul>
 <h4 id="break-20-minutes_4">Break (20 minutes)</h4>
-<h3 id="plenary-session-9-conclusion-and-the-unix-philosophy-15-minutes">Plenary Session 9: Conclusion and The UNIX Philosophy (15 minutes)</h3>
-<ul>
-<li>The UNIX Philosophy<ul>
-<li>Do one thing well</li>
-<li>Use simple text file</li>
-<li>Make every program a filter and make them work together</li>
-<li>Avoid unnecessary output</li>
-</ul>
-</li>
-</ul></div>
+<h3 id="plenary-session-9-conclusion-10-minutes">Plenary Session 9: Conclusion (10 minutes)</h3></div>
         
         
     </div>
@@ -238,13 +321,13 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap-3.0.3.min.js"></script>
 
+      <!-- default is to include highlightjs -->
     
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
-        
-    <script>hljs.initHighlightingOnLoad();</script>
     
 
     <script>var base_url = ".."</script>
+    
+        <script>var shortcuts = {"previous": 76, "next": 72, "search": 191}</script>
     
     <script src="../js/base.js"></script>
     <script src="../search/main.js"></script>
