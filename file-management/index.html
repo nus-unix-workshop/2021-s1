@@ -331,7 +331,7 @@ bar.txt foo.txt test.txt
 <p>Here, you can see that we have moved <code>foo.txt</code> over to the current directory.</p>
 <p>!!! Warning: <code>mv</code> Overwrites
     If there is an existing file with the same name, <code>mv</code> will overwrite
-    the existing file without warning.</p>
+    the existing file without warning. <code>mv</code> comes with a <code>-i</code> flag that interactively asks you if you are sure if you want to overwrite a file.  It is a good idea to always run <code>mv -i</code>. Hit <span class="keys"><kbd class="key-y">Y</kbd></span> to continue overwriting the existing file.  We will see how to make <code>-i</code> the default tomorrow (<a href="../shell/">sneak peak here</a>).</p>
 <div class="admonition tip">
 <p class="admonition-title">Use <span class="keys"><kbd class="key-tab">Tab</kbd></span> for Name Completion</p>
 <p>If you have a very long file name, you may use the <code>bash</code> auto-completion feature to reduce typing. For instance, you may type:
