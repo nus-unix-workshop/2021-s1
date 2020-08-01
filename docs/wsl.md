@@ -56,7 +56,7 @@ To launch WSL, you can hit ++win+r++ and type in `Ubuntu` followed by ++enter++.
 
 ## Getting ready to install tools
 
-WSL comes with `apt` as the package manager, which is a convenient way to list, search, install, update, and uninstall software and libraries in WSL.
+Ubuntu comes with `apt` as the package manager, which is a convenient way to list, search, install, update, and uninstall software and libraries in WSL.
 
 After you have set up WSL, run the following:
 ```Bash
