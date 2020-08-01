@@ -3,7 +3,7 @@
 You can only join the sessions if you log in into Zoom
 `nus-sg.zoom.us` using your NUS account.
 
-To do so, you have to first log out of Zoom if you have already logged in using your personal or other accounts
+To do so, you have to first log out of Zoom if you have already logged in using your non-NUS Zoom account.
 
 There are two options:
 
