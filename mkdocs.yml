@@ -13,6 +13,11 @@ theme:
      - PowerShell
      - Bash
 
+shortcuts:
+  previous: 76 # l
+  next: 72     # h
+  search: 191  # /
+
 nav:
   - Home: index.md
   - Schedule: schedule.md
@@ -30,14 +35,17 @@ nav:
       - 7. Standard I/O: stdio.md
       - 8. Composition with Pipe: pipe.md
       - 9. Pattern Matching: pattern.md
+      - 10. Productivity with Unix: efficiency.md
+      - 11. Intro to Vim: vim-intro.md
+      - 12. Hands on with Vim: vim-practice.md
+      - 13. Bash Scripting: script.md
+      - 14. Remote Servers: ssh.md
+  - Extra: extra.md
+  - Zoom: zoom.md
 
 extra_css:
   - "css/ooiwt.css"
 
-shortcuts:
-    previous: 76 # l
-    next: 72     # h
-    search: 191  # /
 
 markdown_extensions:
   - admonition
@@ -51,7 +59,12 @@ markdown_extensions:
   - pymdownx.highlight:
       linenums: false
   - pymdownx.inlinehilite
-  - pymdownx.keys
+  - pymdownx.keys:
+      key_map: {
+        dollar: "$",
+        parenthesis-left: "(",
+        parenthesis-right: ")",
+      }
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols

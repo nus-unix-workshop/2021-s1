@@ -112,7 +112,8 @@ The slash `/` beside the filename tells you that the file is a directory.  A nor
 You may also use the `ls -l` command (hyphen el, not hyphen one) to display almost all the file information, include the size of the file and the date of modification.
 
 !!! tip "Use Up Arrow for Command History"
-    `bash` maintains a history of your previously executed commands, and you may use the ++up++ and ++down++ arrows to go through it. Press the ++up++ arrow until you find a previously executed command. You may then press ++enter++ to execute it or edit the command before executing it. This is handy when you need to repeatedly execute a long `bash` command.
+    `bash` maintains a history of your previously executed commands, and you may use the ++control+p++ (previous) and ++control+n++ (next) to 
+go through it. Press the ++control+p++ until you find a previously executed command. You may then press ++enter++ to execute it or edit the command before executing it. This is handy when you need to repeatedly execute a long `bash` command.
 
 ### `cd`: Change Directory
 
@@ -137,6 +138,7 @@ Entering `cd` alone (without argument) brings you back to your home directory.
 `rmdir` removes a subDIRectory in the current directory -- note that a directory must be empty before it can be removed.
 
 The command
-```Bashs $ rmdir workshop
+```
+$ rmdir workshop
 ```
 will remove the directory that you just created.

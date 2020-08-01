@@ -31,42 +31,26 @@
 - 9: [Pattern Matching](pattern.md)
 
 ## DAY 2
-### Plenary Session 5: Gaining Efficiency with Unix (10 minutes)
+### Plenary Session 5: Gaining Efficiency with Unix (20 minutes)
 
-- Automation, Staying in Your Zone, and Powertools
-- The philosophy and power of `vim`
+- 10: [Producitivity with Unix](efficiency.md)
+- 11: [The philosophy and power of `vim`](vim-intro.md)
 
 ### Breakout Session 5: Simple file editing with vim (30 minutes) 
 
-- Running and quitting `vim`
-- Insert mode and command mode (i and esc)
-- Moving cursor around with hjkl
+- 12: [Hands-on with `vim`](vim-practice.md)
 
 #### Break (20 minutes)
 ### Breakout Session 6: Very Basic Shell Scripts (30 minutes)
 
-- Putting a sequence of commands in a file and executing the file
-- Command-line arguments and variables
+- 13: [Bash Configuration and Scripting](script.md)
 
 #### Break (20 minutes)
-### Breakout Session 7: Extending your Unix Environment (20 minutes)
 
-- Using `apt` (WSL) and `brew` (macOS), `curl`
-- install, list, search, uninstall
+### Breakout Session 8: Remote Servers (20 minutes)
 
-### Breakout Session 8: Remote Servers (10 minutes)
-
-- Concepts of hosts, client, server.
-- Accessing a remote server via `ssh`
-- Ssh into `sdf.org`
-    - Preview of SoC Unix environments (`stu0`) 
+- 14: [Accessing Remote Servers](ssh.md)
 
 #### Break (20 minutes)
-### Plenary Session 9: Conclusion and The Unix Philosophy (15 minutes)
-
-- The Unix Philosophy
-    - Do one thing well
-    - Use simple text file
-    - Make every program a filter and make them work together
-    - Avoid unnecessary output
+### Plenary Session 9: Conclusion (10 minutes)
 

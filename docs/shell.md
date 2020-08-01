@@ -21,8 +21,8 @@ by programs called _terminal emulator_ or _virtual terminal_.
 Examples include `Terminal` and `iTerm2` on macOS; `Windows Terminal`
 on Microsoft; `xterm` and `konsole` on Ubuntu, etc.
 Many legacy control commands on these teletype machines remain
-in today's computing environment, such as the [terminal control 
-sequence](ctrl-seq.md).
+in today's computing environment, such as the terminal control 
+sequence.
 
 ## What is a Shell?
 

@@ -42,7 +42,9 @@ You can achieve this step by:
 
 ### Step 3: Install Ubuntu 
 
-After restarting your computer, go to the <a href="https://aka.ms/wslstore">Microsoft Store</a> and get <a href="https://www.microsoft.com/store/productId/9N9TNGVNDL3Q">Ubuntu</a>.
+After restarting your computer, go to the <a href="https://aka.ms/wslstore">Microsoft Store</a> and get <a href="https://www.microsoft.com/store/productId/9N9TNGVNDL3Q">Ubuntu</a> 18.04 LTS.[^1]
+
+[^1]: The latest Ubuntu 20.04 LTS is [reported](https://discourse.ubuntu.com/t/ubuntu-20-04-and-wsl-1/15291) reported to be unstable on WSL 1.
 
 Follow the on-screen instructions to install.  
 
@@ -58,11 +60,11 @@ WSL comes with `apt` as the package manager, which is a convenient way to list, 
 
 After you have set up WSL, run the following:
 ```Bash
-sudo apt-get update
+sudo apt update
 ```
 What it does:
 
-- `apt-get` is a command to install, upgrade, and uninstall software and other packages in Ubuntu.
-- `apt-get update` asks `apt-get` to obtain the latest list of available packages from the Internet.
-- `sudo` performs `apt-get update` with a super-user's level permission.  This command may ask you to enter your password.
+- `apt` is a command to install, upgrade, search, and uninstall software and other packages in Ubuntu.
+- `apt update` asks `apt` to obtain the latest list of available packages from the Internet.
+- `sudo` performs `apt update` with a super-user's level permission.  This command may ask you to enter your password.
    (Note: super-user means administrator in Unix).

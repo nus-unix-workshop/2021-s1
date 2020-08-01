@@ -109,7 +109,7 @@ Here, you can see that we have moved `foo.txt` over to the current directory.
 
 !!! Warning: `mv` Overwrites
     If there is an existing file with the same name, `mv` will overwrite
-	the existing file without warning.
+	the existing file without warning. `mv` comes with a `-i` flag that interactively asks you if you are sure if you want to overwrite a file.  It is a good idea to always run `mv -i`. Hit ++y++ to continue overwriting the existing file.  We will see how to make `-i` the default tomorrow ([sneak peak here](shell.md)).
 
 !!! tip "Use ++tab++ for Name Completion"
     If you have a very long file name, you may use the `bash` auto-completion feature to reduce typing. For instance, you may type:
@@ -164,3 +164,8 @@ In `less`, use `<space>` to move down one page, `b` to move Back up one page, an
 ### `man`: Online MANual
 
 An online help facility is available in Unix via the `man` command (`man` stands for MANual). To look for more information about any Unix command, for example, `ls`, type `man ls`. Type `man man` and refer to Man Pages to find out more about the facility. To exit `man`, press `q`.
+
+## Other Useful Online Tools
+
+- [explainshell](https://explainshell.com/) explain each shell command for you
+
