@@ -41,6 +41,7 @@ nav:
       - 13. Bash Scripting: script.md
       - 14. Remote Servers: ssh.md
   - Extra: extra.md
+  - Zoom: zoom.md
 
 extra_css:
   - "css/ooiwt.css"
