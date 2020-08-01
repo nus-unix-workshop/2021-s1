@@ -42,8 +42,10 @@ The expression `[f-t]*t` matches all file names the start with alphabet `f`, `g`
 
 #### Example 3:
 ```
-$ ls {fo,ba}??txt
-foo.txt test.txt
+$ ls *.txt
+bar.txt foo.txt test.txt
+$ ls {fo,ba}??txt   
+bar.txt foo.txt
 ```
 
 The expression `{fo,ba}??txt` matches any file names the start with either `fo` or `ba`, followed by two characters, followed by `txt`.

@@ -74,7 +74,7 @@ Not only the basic commands `vim` adhere to the Unix principles of composability
 :r! <command>
 ```
 ++colon++ triggers the `vim` command line.  ++r++ ask `vim` to read something and paste it into the current cursor location.  At this point, you can pass in, for instance, another file name.  But here, we enter
-++exclaim++, which tells `vim` to run a shell.  We then pass the `command` to the shell.  Whatever the command writes to the standard output, will be read and inserted into `vim`.
+++exclam++, which tells `vim` to run a shell.  We then pass the `command` to the shell.  Whatever the command writes to the standard output, will be read and inserted into `vim`.
 
 Want to insert today's date?
 ```

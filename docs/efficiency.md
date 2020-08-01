@@ -22,7 +22,7 @@ We can even minimize the movement of our fingers in several ways by typing less.
 
 - Unix commands are named economically -- they are often only a few characters long.
 - We can use ++tab++ to auto-complete a command or a file name.
-- We can use ++control-p++ or ++control+n++ to repeat a previous commands.
+- We can use ++control+p++ or ++control+n++ to repeat a previous commands.
 
 There are many more `bash` shortcuts for productivity, if you are keen, take a look here: https://github.com/fliptheweb/bash-shortcuts-cheat-sheet
 
