@@ -37,7 +37,7 @@ First-year students taking CS1010, CS2030, CS2030S, and CS2040 in Semester 1 of 
 
 The workshop is sponsored by the NUS School of Computing and is free to attend.  Space, however, is limited -- please register only if you are committed to attending.
 
-lease <a href="https://nus.syd1.qualtrics.com/jfe/form/SV_8tQi8pwT2MGXFLD">register here.</a> before **28 July, 2020**.
+Please <a href="https://nus.syd1.qualtrics.com/jfe/form/SV_8tQi8pwT2MGXFLD">register here.</a> before **28 July, 2020**.
 
 ## License
 
