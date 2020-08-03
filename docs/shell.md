@@ -97,5 +97,5 @@ to know:
     A common mistake for new students is to hit ++control+z++ frequently if something goes wrong with their program -- this behavior leads to large number of suspended programs (which still occupy resources such as memory on the computer).  The right sequence to use is ++control+c++ -- which terminates the program (and frees up the resources).
 
 !!! note "++control+s++ accidents"
-    Since ++control+s++ is used as the "save" shortcut in non-Unix environment, many students accidentally hit this contorl sequence, causing their terminal to freeze.  Don't panic if this happens.  Just hit ++control+q++ and things will be back to normal.
+    Since ++control+s++ is used as the "save" shortcut in non-Unix environment, many students accidentally hit this control sequence, causing their terminal to freeze.  Don't panic if this happens.  Just hit ++control+q++ and things will be back to normal.
 
