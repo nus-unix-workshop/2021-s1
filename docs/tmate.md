@@ -34,7 +34,7 @@ To share your screen with someone you trust, run:
 tmate
 ```
 
-You should then see the following messages:
+You should then see the following messages (or something similar):
 
 ```
 Tip: if you wish to use tmate only for remote access, run: tmate -F        [0/0]
@@ -51,6 +51,7 @@ ssh session: ssh 3svwMBrjhwgp93QmZFHLnwzRP@sgp1.tmate.io
 
 Note that your output will not be exactly the same as the above, particular, the seemingly gibberish text is randomly generated when
 you run `tmate`, so it will be a different gibberish every time.
+Further, `tmate` 2.2.1 provides fewer options and has a shorter message.
 
 There are several important piece of information here:
 
