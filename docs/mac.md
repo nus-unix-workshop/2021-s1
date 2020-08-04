@@ -24,3 +24,12 @@ If you have not installed Homebrew before, paste the following into your shell t
 ```Bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
+
+### Install `wget`
+
+`wget` is a useful tool to download files from the Internet.  You can
+install `wget` using Homebrew:
+
+```
+$ brew install wget
+```
