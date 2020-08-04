@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@531;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>NUS SoC Unix@Home Workshop</title>
+    <meta charset="utf-8">
+    <style>
+kbd {
+	background-color: #eee;
+	border-radius: 3px;
+	border: 1px solid #b4b4b4;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+	color: #333;
+	display: inline-block;
+	font-size: .85em;
+	font-weight: 700;
+	line-height: 1;
+	padding: 2px 4px;
+	white-space: nowrap;
+}
+      body { 
+        font-family: "Open Sans"; 
+      }
+      h1, h2 {
+        font-family: "Inter";
+        font-weight: 700;
+      }
+
+      h3 {
+          font-size: 48pt;
+      }
+      .remark-code, .remark-inline-code { 
+		  font-family: 'Monaco'; }
+      .remark-slide-content {
+          font-size: 20pt;
+            background-size: contain;
+      }
+      .smaller {
+          font-size: 28pt;
+      }
+      .remark-slide-number {
+          font-size: 12pt;
+      }
+      .fit > img {
+          max-width: 100%;
+          height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+### The NUS School of Computing
+# Unix@Home
+### Workshop
+
+macOS Edition
+
+3 - 4 August 2020
+---
+
+# Agenda (Day 2)
+
+1. Productivity
+2. `vim` Editor
+3. `bash` Scripting
+4. `ssh` into Remote Hosts
+
+---
+class: center, middle
+
+### The command-line interface is a precise, flexible, programmable, keyboard-only interface to get things done
+
+---
+class: middle
+
+_prof, can you send me the solutions to Assignments 4, 5, and 6 from
+CS1010 two years ago?_
+
+```Bash
+$ zip as4-6.zip ~/cs1010/1819s1/as0[4-6]-solution/*.c 
+$ open -a Mail as4-6.zip
+```
+---
+class: middle
+
+_prof, can you send me the solutions to Assignments 4, 5, and 6 from
+CS1010 two years ago?_
+
+```Bash
+$ zip as4-6.zip ~/cs1010/1819s1/as0[4-6]-solution/*.c 
+$ uuencode as4-6.zip as4-6.zip | mail -s "here!" tutor@example.com
+```
+---
+
+class: middle
+
+# Precise
+
+## Tell the shell what you want to do, instead of doing it yourself (clicking, selecting, etc)
+
+---
+class: middle, center
+
+<video width="560" height="420" controls>
+    <source src="videos/finder.mp4" type="video/mp4">
+</video>
+
+---
+class: middle
+
+# Flexible
+
+## Combine multiple tools the way you want to get things done.
+
+```
+cat ID | sort | uniq | grep CEG | wc -l
+```
+---
+class: middle
+
+# Programmable
+
+## Actions are just text that you can store and "replay" later
+
+```Bash
+#!/bin/bash
+# Send solutions weekly to tutors
+zip $1.zip ~/cs1010/2021s1/$1-solution/*.c 
+uuencode $1.zip $1.zip | mail -s "Solution for $1" all-tutor@example.com
+```
+
+---
+class: middle
+
+# Keyboard-Only
+
+## Save time on switching between keyboard and mouse (hand movement, looking for that cursor, etc)
+
+---
+class: middle, center
+
+.fit[![keyboard](docs/figures/keyboard.png)]
+
+---
+class: middle, center
+
+# Type less, do more!
+
+---
+class: middle, center
+
+# The `vim` Editor
+
+---
+
+# 1: Minimizing Hand Movement
+
+.fit[![keyboard](docs/figures/keyboard.png)]
+
+<kbd>h</kbd> <kbd>j</kbd> <kbd>k</kbd> <kbd>l</kbd> to move.
+<kbd>shift</kbd>+<kbd>z</kbd>+<kbd>z</kbd> to quit.
+
+---
+
+# 2: Multimodal
+
+### `INSERT` mode and `NORMAL` mode
+
+`NORMAL` for reading, moving around, and manipulating text
+
+`INSERT` for adding text
+
+---
+
+# 3: Descriptive
+
+```Bash
+Wherever there is light, there is also a shadow.
+```
+
+Look for the word "also": 
+<kbd>/</kbd>
+<kbd>A</kbd>
+<kbd>L</kbd>
+<kbd>S</kbd>
+<kbd>O</kbd>
+<kbd>ENTER</kbd>
+and delete two words <kbd>D</kbd> <kbd>2</kbd> <kbd>W</kbd>
+
+---
+# Comparison
+
+<video width="480" height="420" controls autoplay loop>
+    <source src="videos/d2w-mouse.mp4" type="video/mp4">
+</video>
+<video width="480" height="420" controls autoplay loop>
+    <source src="videos/d2w-vim.mp4" type="video/mp4">
+</video>
+
+---
+class: middle, center
+
+# Text editing at the speed of thought!
+
+---
+# 4: Good Unix Citizen
+
+## Interact with standard input and output of Unix utilities
+
+```Bash
+:r !cal
+```
+
+```Bash
+:r !date
+```
+
+```Bash
+:r !ls *jpg
+```
+---
+# Other Reasons for `vim`
+
+- Installed by default on any Unix system
+- One editor for all programming languages
+- Lots of plugins!
+- Most IDEs has `vim` bindings/plugins
+
+---
+class: middle
+
+## Get past the initial learning curve
+## Build up your muscle memory
+
+# It will be rewarding!
+
+---
+class: center, middle
+
+## We are just touching the tip of the iceberg
+
+## Learn what you need; but keep learning
+
+#### I used Unix CLI and vim for 30 years, but probably use only about 20-30% of the available commands/features.
+
+---
+class: center, middle
+
+### A change of mindset
+
+## Don't be content with the tools provided
+
+## Ask: "how to do this faster/better?"
+
+## If there is an existing way, install and use it
+
+## Otherwise, write your own
+
+---
+class: center, middle
+
+# Piazza will remain open for a few more weeks.
+
+---
+class: center, middle
+
+# Please fill up a feedback survey we will send out later.
+
+### (Remember your tutor's name)
+
+---
+class: center, middle
+
+# Thank You!
+
+# 🙏
+
+</textarea>
+
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+		var slideshow = remark.create({
+				ratio: '16:9',
+				highlightStyle: 'monokai'
+				});
+    </script>
+  </body>
+</html>
