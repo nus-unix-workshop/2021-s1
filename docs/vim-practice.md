@@ -71,7 +71,7 @@ Use ++g+g++ to jump to the beginning of the file, and ++shift+g++ (`G`) to
 jump to the last line of the file.
 
 Now try ++slash++, type in any word (or prefix of a word) and ++enter++.  This should move the cursor to the beginning of the word.  You can use
-++n++ and ++p++ to move to the next match and the previous match.
+++n++ and ++shift+n++ to move to the next match and the previous match.
 
 When you are comfortable with moving around, you can ++shift+z+z++ to
 exit.
