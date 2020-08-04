@@ -14,8 +14,8 @@ theme:
      - Bash
 
 shortcuts:
-  previous: 76 # l
-  next: 72     # h
+  previous: 72 # h
+  next: 76     # l
   search: 191  # /
 
 nav:
@@ -61,6 +61,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.keys:
       key_map: {
+        bang: "!",
         dollar: "$",
         parenthesis-left: "(",
         parenthesis-right: ")",
