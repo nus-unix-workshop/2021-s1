@@ -28,6 +28,15 @@ Enter `nus-sg` into the field "Company Domain" and click continue.
 You will be prompted to enter your NUSNET ID and password.  Follow
 the instruction on the screen.
 
+## Using Zoom Desktop Client
+
+Some students have reported issues when trying to join a breakout
+room when using Web version of Zoom (i.e., connecting through a Web
+browser).  
+
+Please join the workshop by using the Zoom application instead of
+through a Web browser.
+
 ## Links to Join Zoom
 
 The Zoom session information will be/have been sent to you privately.  Check
