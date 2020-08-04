@@ -2,7 +2,7 @@
 
 ### Courses Elsewhere
 
-- [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/)
+- [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/) at MIT
 - [Great Practical Ideas in CS](https://www.cs.cmu.edu/~15131/f17/) at CMU
 - [The Unix Shell](https://swcarpentry.github.io/shell-novice/) by the Software Carpentry Foundation.
 - [The Vim Editor: Philosophy, Principles and Practice](http://www.andrew.cmu.edu/user/haoxuany/vim/) at CMU
@@ -15,9 +15,19 @@
 ### Command Line Gems
 
 - [commandlinefu](https://www.commandlinefu.com/commands/browse/sort-by-votes)
+- [explainshell](https://www.explainshell.com)
+- [tldr](https://tldr.ostera.io/): better `man` pages.
+- [Modernized commandline utils](https://www.vimfromscratch.com/articles/awesome-command-line-tools/) compiled by VimFromScratch.
+
+### (Good Old Fashion) FAQ
+
+- [Unix FAQ](http://www.faqs.org/faqs/unix-faq/faq/contents/)
+- [Bash FAQ](http://www.faqs.org/faqs/unix-faq/shell/bash/)
+- [Vim FAQ](https://vimhelp.org/vim_faq.txt.html)
 
 ### Vim Tutorials
 
+- `vimtutor`: Just run `vimtutor` on the command line
 - [Vim: Precision Editing at the Speed of Thought](https://vimeo.com/53144573): A talk by Drew Neil
 - [Vim Adventure](https://www.vim-adventures.com): An adventure game for
   learning `vim`
