@@ -67,7 +67,7 @@ Next, try ++brace-left++ and ++brace-right++ to move forward and backward, parag
 Use ++0++ to jump to the beginning of the line, and ++dollar++ to
 jump to the end of the line.
 
-Use ++g+g++ to jump to the beginning of the file, and ++shift+g++ (`G`) to
+Use ++g+g++ (lower case g) to jump to the beginning of the file, and ++shift+g++ (`G`) to
 jump to the last line of the file.
 
 Now try ++slash++, type in any word (or prefix of a word) and ++enter++.  This should move the cursor to the beginning of the word.  You can use
